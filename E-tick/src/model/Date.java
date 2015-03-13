@@ -1,45 +1,39 @@
 package model;
-/***********************************************************************
- * Module:  Date.java
- * Author:  Oussama
- * Purpose: Defines the Class Date
- ***********************************************************************/
+import java.util.* ;
 
-
-/** @pdOid 62dfa4af-1c65-49fd-8973-4c3bd29f5559 */
 public class Date {
-   /** @pdOid 477d7f92-0e3f-4ae7-a874-75ec4b216506 */
+   
    public int numDate;
-   /** @pdOid 7c615fcc-9b63-4f0d-b69f-c1906b9dae7a */
-   public java.util.Date dateDebut;
-   /** @pdOid c750b605-cf00-492a-a383-4362fec49b4e */
-   public java.util.Date dateFin;
+
+   public Date dateDebut;
    
-   /** @pdRoleInfo migr=no name=Seance assc=seanceDate coll=java.util.Collection impl=java.util.HashSet mult=1..* */
-   public java.util.Collection<Seance> seance;
-   /** @pdRoleInfo migr=no name=Evenement assc=evenementDate coll=java.util.Collection impl=java.util.HashSet mult=1..* side=A */
-   public java.util.Collection<Evenement> evenement;
+   public Date dateFin;
+   
+  
+   public Collection<Seance> seance;
+   
+   public Collection<Evenement> evenement;
    
    
-   /** @pdGenerated default getter */
-   public java.util.Collection<Seance> getSeance() {
+ 
+   public Collection<Seance> getSeance() {
       if (seance == null)
-         seance = new java.util.HashSet<Seance>();
+         seance = new HashSet<Seance>();
       return seance;
    }
    
    /** @pdGenerated default iterator getter */
-   public java.util.Iterator getIteratorSeance() {
+   public Iterator getIteratorSeance() {
       if (seance == null)
-         seance = new java.util.HashSet<Seance>();
+         seance = new HashSet<Seance>();
       return seance.iterator();
    }
    
    /** @pdGenerated default setter
      * @param newSeance */
-   public void setSeance(java.util.Collection<Seance> newSeance) {
+   public void setSeance(Collection<Seance> newSeance) {
       removeAllSeance();
-      for (java.util.Iterator iter = newSeance.iterator(); iter.hasNext();)
+      for (Iterator iter = newSeance.iterator(); iter.hasNext();)
          addSeance((Seance)iter.next());
    }
    
@@ -49,7 +43,7 @@ public class Date {
       if (newSeance == null)
          return;
       if (this.seance == null)
-         this.seance = new java.util.HashSet<Seance>();
+         this.seance = new HashSet<Seance>();
       if (!this.seance.contains(newSeance))
       {
          this.seance.add(newSeance);
@@ -75,7 +69,7 @@ public class Date {
       if (seance != null)
       {
          Seance oldSeance;
-         for (java.util.Iterator iter = getIteratorSeance(); iter.hasNext();)
+         for (Iterator iter = getIteratorSeance(); iter.hasNext();)
          {
             oldSeance = (Seance)iter.next();
             iter.remove();
@@ -84,16 +78,16 @@ public class Date {
       }
    }
    /** @pdGenerated default getter */
-   public java.util.Collection<Evenement> getEvenement() {
+   public Collection<Evenement> getEvenement() {
       if (evenement == null)
-         evenement = new java.util.HashSet<Evenement>();
+         evenement = new HashSet<Evenement>();
       return evenement;
    }
    
    /** @pdGenerated default iterator getter */
-   public java.util.Iterator getIteratorEvenement() {
+   public Iterator getIteratorEvenement() {
       if (evenement == null)
-         evenement = new java.util.HashSet<Evenement>();
+         evenement = new HashSet<Evenement>();
       return evenement.iterator();
    }
    
@@ -101,7 +95,7 @@ public class Date {
      * @param newEvenement */
    public void setEvenement(java.util.Collection<Evenement> newEvenement) {
       removeAllEvenement();
-      for (java.util.Iterator iter = newEvenement.iterator(); iter.hasNext();)
+      for (Iterator iter = newEvenement.iterator(); iter.hasNext();)
          addEvenement((Evenement)iter.next());
    }
    
@@ -111,7 +105,7 @@ public class Date {
       if (newEvenement == null)
          return;
       if (this.evenement == null)
-         this.evenement = new java.util.HashSet<Evenement>();
+         this.evenement = new HashSet<Evenement>();
       if (!this.evenement.contains(newEvenement))
       {
          this.evenement.add(newEvenement);
@@ -137,7 +131,7 @@ public class Date {
       if (evenement != null)
       {
          Evenement oldEvenement;
-         for (java.util.Iterator iter = getIteratorEvenement(); iter.hasNext();)
+         for (Iterator iter = getIteratorEvenement(); iter.hasNext();)
          {
             oldEvenement = (Evenement)iter.next();
             iter.remove();
