@@ -1,7 +1,11 @@
-package model;
+package categorie;
 
 
-public class Categorie {
+
+import evenementcategorie.EvenementCategorie;
+
+
+public class Categorie  {
   
    public int numCategorie;
   
@@ -42,6 +46,9 @@ public EvenementCategorie getEvenementCategorie() {
 public void setEvenementCategorie(EvenementCategorie evenementCategorie) {
 	this.evenementCategorie = evenementCategorie;
 }
-   
+
+
+
+
 
 }

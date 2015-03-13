@@ -1,4 +1,7 @@
 package model;
+
+import evenement.Evenement;
+
 /***********************************************************************
  * Module:  LigneCommande.java
  * Author:  Oussama

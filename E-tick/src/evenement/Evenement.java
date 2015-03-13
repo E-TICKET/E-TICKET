@@ -1,4 +1,4 @@
-package model;
+package evenement;
 /***********************************************************************
  * Module:  Evenement.java
  * Author:  Oussama
@@ -7,9 +7,11 @@ package model;
 
 import java.util.*;
 
+import model.Date;
+
 public class Evenement {
 
-   public String numEvenement;
+   public int numEvenement;
 
    public String nomEvenement;
 
@@ -72,7 +74,55 @@ public class Evenement {
          }
    }
    
-   /** @pdGenerated default removeAll */
+   public int getNumEvenement() {
+	return numEvenement;
+}
+
+public void setNumEvenement(int numEvenement) {
+	this.numEvenement = numEvenement;
+}
+
+public String getNomEvenement() {
+	return nomEvenement;
+}
+
+public void setNomEvenement(String nomEvenement) {
+	this.nomEvenement = nomEvenement;
+}
+
+public int getQteStock() {
+	return qteStock;
+}
+
+public void setQteStock(int qteStock) {
+	this.qteStock = qteStock;
+}
+
+public int getPrixMin() {
+	return prixMin;
+}
+
+public void setPrixMin(int prixMin) {
+	this.prixMin = prixMin;
+}
+
+public Collection getLigneCommande() {
+	return ligneCommande;
+}
+
+public void setLigneCommande(Collection ligneCommande) {
+	this.ligneCommande = ligneCommande;
+}
+
+public Collection getEvenementCategorie() {
+	return evenementCategorie;
+}
+
+public void setEvenementCategorie(Collection evenementCategorie) {
+	this.evenementCategorie = evenementCategorie;
+}
+
+/** @pdGenerated default removeAll */
    public void removeAllDate() {
       if (date != null)
       {
