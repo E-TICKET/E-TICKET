@@ -1,3 +1,4 @@
+package model;
 /***********************************************************************
  * Module:  LigneCommande.java
  * Author:  Oussama

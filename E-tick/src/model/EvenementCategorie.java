@@ -1,3 +1,4 @@
+package model;
 /***********************************************************************
  * Module:  EvenementCategorie.java
  * Author:  Oussama

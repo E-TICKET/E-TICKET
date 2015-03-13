@@ -1,25 +1,23 @@
+package model;
 /***********************************************************************
- * Module:  Evenement.java
+ * Module:  Seance.java
  * Author:  Oussama
- * Purpose: Defines the Class Evenement
+ * Purpose: Defines the Class Seance
  ***********************************************************************/
 
+import java.util.*;
 
-/** @pdOid b2863de7-937a-49c2-a10c-ea6593f8003c */
-public class Evenement {
-   /** @pdOid 0be97fb8-9263-4ee5-8f27-0997179dcd0d */
-   public java.lang.String numEvenement;
-   /** @pdOid 5b6dd638-3ab5-4cba-b30f-cc9f81984c6a */
-   public java.lang.String nomEvenement;
-   /** @pdOid a41941cc-1663-41f6-8993-e2a0382f1d14 */
-   public int qteStock;
-   /** @pdOid 9e841fa1-3972-45f1-851e-e187e157ca6c */
-   public int prixMin;
+/** @pdOid 88775d7e-8446-49c9-98e7-450ccbcc6012 */
+public class Seance {
+   /** @pdOid d8b81c2c-dddd-46b6-b290-67381aa23222 */
+   public int numSeance;
+   /** @pdOid 59d71673-31e6-4af5-84b0-59966226628b */
+   public java.util.Date heureDebut;
+   /** @pdOid 90377d0a-6b93-46b2-9670-236f40fc5452 */
+   public java.util.Date heureFin;
    
-   public java.util.Collection ligneCommande;
-   /** @pdRoleInfo migr=no name=Date assc=evenementDate coll=java.util.Collection impl=java.util.HashSet mult=1..* */
+   /** @pdRoleInfo migr=no name=Date assc=seanceDate coll=java.util.Collection impl=java.util.HashSet mult=1..* side=A */
    public java.util.Collection<Date> date;
-   public java.util.Collection evenementCategorie;
    
    
    /** @pdGenerated default getter */
@@ -54,7 +52,7 @@ public class Evenement {
       if (!this.date.contains(newDate))
       {
          this.date.add(newDate);
-         newDate.addEvenement(this);      
+         newDate.addSeance(this);      
       }
    }
    
@@ -67,7 +65,7 @@ public class Evenement {
          if (this.date.contains(oldDate))
          {
             this.date.remove(oldDate);
-            oldDate.removeEvenement(this);
+            oldDate.removeSeance(this);
          }
    }
    
@@ -80,7 +78,7 @@ public class Evenement {
          {
             oldDate = (Date)iter.next();
             iter.remove();
-            oldDate.removeEvenement(this);
+            oldDate.removeSeance(this);
          }
       }
    }

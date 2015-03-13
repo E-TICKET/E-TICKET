@@ -1,3 +1,4 @@
+package model;
 /***********************************************************************
  * Module:  TypeEvenement.java
  * Author:  Oussama

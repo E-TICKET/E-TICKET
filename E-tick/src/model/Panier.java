@@ -1,3 +1,4 @@
+package model;
 /***********************************************************************
  * Module:  Panier.java
  * Author:  Oussama

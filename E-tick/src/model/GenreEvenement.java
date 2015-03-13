@@ -1,3 +1,4 @@
+package model;
 /***********************************************************************
  * Module:  GenreEvenement.java
  * Author:  Oussama

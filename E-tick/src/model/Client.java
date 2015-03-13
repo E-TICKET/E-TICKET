@@ -1,3 +1,4 @@
+package model;
 /***********************************************************************
  * Module:  Client.java
  * Author:  Oussama

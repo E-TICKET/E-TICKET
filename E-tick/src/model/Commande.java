@@ -1,3 +1,4 @@
+package model;
 /***********************************************************************
  * Module:  Commande.java
  * Author:  Oussama
