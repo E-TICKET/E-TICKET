@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 mars 2015 16:50:09 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="model.Date" table="DATE">
+        <id name="numDate" type="int" access="field">
+            <column name="NUMDATE" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="dateDebut" class="model.Date" access="field" fetch="join">
+            <column name="DATEDEBUT" />
+        </many-to-one>
+        <many-to-one name="dateFin" class="model.Date" access="field" fetch="join">
+            <column name="DATEFIN" />
+        </many-to-one>
+        <bag name="seance" table="SEANCE" inverse="false" lazy="true">
+            <key>
+                <column name="NUMDATE" />
+            </key>
+            <one-to-many class="model.Seance" />
+        </bag>
+        <bag name="evenement" table="EVENEMENT" inverse="false" lazy="true">
+            <key>
+                <column name="NUMDATE" />
+            </key>
+            <one-to-many class="model.Evenement" />
+        </bag>
+    </class>
+</hibernate-mapping>

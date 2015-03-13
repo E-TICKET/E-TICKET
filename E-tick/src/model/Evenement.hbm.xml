@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 mars 2015 16:50:09 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="model.Evenement" table="EVENEMENT">
+        <id name="numEvenement" type="java.lang.String" access="field">
+            <column name="NUMEVENEMENT" />
+            <generator class="assigned" />
+        </id>
+        <property name="nomEvenement" type="java.lang.String" access="field">
+            <column name="NOMEVENEMENT" />
+        </property>
+        <property name="qteStock" type="int" access="field">
+            <column name="QTESTOCK" />
+        </property>
+        <property name="prixMin" type="int" access="field">
+            <column name="PRIXMIN" />
+        </property>
+        <bag name="ligneCommande" table="EVENEMENT" inverse="false" lazy="true" access="field">
+            <key>
+                <column name="NUMEVENEMENT" />
+            </key>
+            <element type="string">
+                <column name="LIGNECOMMANDE" />
+            </element>
+        </bag>
+        <bag name="date" table="DATE" inverse="false" lazy="true">
+            <key>
+                <column name="NUMEVENEMENT" />
+            </key>
+            <one-to-many class="model.Date" />
+        </bag>
+        <bag name="evenementCategorie" table="EVENEMENT" inverse="false" lazy="true" access="field">
+            <key>
+                <column name="NUMEVENEMENT" />
+            </key>
+            <element type="string">
+                <column name="EVENEMENTCATEGORIE" />
+            </element>
+        </bag>
+    </class>
+</hibernate-mapping>

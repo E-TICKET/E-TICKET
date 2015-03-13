@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 mars 2015 16:50:09 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="model.EvenementCategorie" table="EVENEMENTCATEGORIE">
+        <id name="prix" type="int" access="field">
+            <column name="PRIX" />
+            <generator class="assigned" />
+        </id>
+        <one-to-one name="categorieA" class="model.Categorie" access="field"></one-to-one>
+        <many-to-one name="evenementB" class="model.Evenement" access="field" fetch="join">
+            <column name="EVENEMENTB" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
