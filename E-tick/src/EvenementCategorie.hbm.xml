@@ -4,13 +4,21 @@
 <!-- Generated 13 mars 2015 20:57:52 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
     <class name="evenementcategorie.EvenementCategorie" table="EVENEMENTCATEGORIE">
-        <id name="prix" type="int" access="field">
-            <column name="PRIX" />
+        <id name="numEvenementCategorie" type="int" access="field">
+            <column name="NumEvenementCategorie" />
             <generator class="increment" />
         </id>
-        <one-to-one name="categorieA" class="categorie.Categorie" access="field"></one-to-one>
+         <property name="prix" type="int" access="field">
+            <column name="Prix" />
+        </property>
+        
+       
+        <many-to-one name="categorieA" class="categorie.Categorie" access="field" fetch="join">
+            <column name="NumCategorie" />
+        </many-to-one>
+        
         <many-to-one name="evenementB" class="evenement.Evenement" access="field" fetch="join">
-            <column name="EVENEMENTB" />
+            <column name="NumEvenement" />
         </many-to-one>
     </class>
 </hibernate-mapping>

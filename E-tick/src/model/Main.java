@@ -70,6 +70,8 @@ sauve(c);
 		IServiceObject evenementcategorieService=(IServiceObject)context.getBean("evenementcategorieService");
 		EvenementCategorie evc = new EvenementCategorie();
 		evc.setPrix(123);
+		e.setNumEvenement(1);
+		c.setNumCategorie(1);
 		evc.setEvenementB(e);
 		evc.setCategorieA(c);
 		evenementcategorieService.create(evc);

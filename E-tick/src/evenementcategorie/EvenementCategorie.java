@@ -13,19 +13,25 @@ import evenement.Evenement;
 
 
 public class EvenementCategorie {
-  
-   public int prix;
-   
-   public Categorie categorieA;
-   public Evenement evenementB;
-public void setPrix(int prix) {
-	this.prix = prix;
-}
-public void setCategorieA(Categorie categorieA) {
-	this.categorieA = categorieA;
-}
-public void setEvenementB(Evenement evenementB) {
-	this.evenementB = evenementB;
-}
+
+	public int prix;
+	public int numEvenementCategorie;
+	
+	public Categorie categorieA;
+	public Evenement evenementB;
+	
+	public void setNumEvenementCategorie(int numEvenementCategorie) {
+		this.numEvenementCategorie = numEvenementCategorie;
+	}
+	
+	public void setPrix(int prix) {
+		this.prix = prix;
+	}
+	public void setCategorieA(Categorie categorieA) {
+		this.categorieA = categorieA;
+	}
+	public void setEvenementB(Evenement evenementB) {
+		this.evenementB = evenementB;
+	}
 
 }
