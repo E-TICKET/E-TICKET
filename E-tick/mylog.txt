@@ -1,0 +1,166 @@
+2015-03-13 21:03:24,362 DEBUG main org.hibernate.loader.entity.EntityLoader - Static select for entity categorie.Categorie [PESSIMISTIC_READ]: select categorie0_.NUMCATEGORIE as NUMCATEG1_0_0_, categorie0_.NOMCATEGORIE as NOMCATEG2_0_0_, categorie0_.NBCATEGORIE as NBCATEGO3_0_0_ from CATEGORIE categorie0_ where categorie0_.NUMCATEGORIE=? lock in share mode
+2015-03-13 21:03:24,362 DEBUG main org.hibernate.loader.entity.EntityLoader - Static select for entity categorie.Categorie [PESSIMISTIC_WRITE]: select categorie0_.NUMCATEGORIE as NUMCATEG1_0_0_, categorie0_.NOMCATEGORIE as NOMCATEG2_0_0_, categorie0_.NBCATEGORIE as NBCATEGO3_0_0_ from CATEGORIE categorie0_ where categorie0_.NUMCATEGORIE=? for update
+2015-03-13 21:03:24,362 DEBUG main org.hibernate.loader.entity.EntityLoader - Static select for entity categorie.Categorie [PESSIMISTIC_FORCE_INCREMENT]: select categorie0_.NUMCATEGORIE as NUMCATEG1_0_0_, categorie0_.NOMCATEGORIE as NOMCATEG2_0_0_, categorie0_.NBCATEGORIE as NBCATEGO3_0_0_ from CATEGORIE categorie0_ where categorie0_.NUMCATEGORIE=? for update
+2015-03-13 21:03:24,363 DEBUG main org.hibernate.loader.entity.EntityLoader - Static select for action ACTION_MERGE on entity categorie.Categorie: select categorie0_.NUMCATEGORIE as NUMCATEG1_0_0_, categorie0_.NOMCATEGORIE as NOMCATEG2_0_0_, categorie0_.NBCATEGORIE as NBCATEGO3_0_0_ from CATEGORIE categorie0_ where categorie0_.NUMCATEGORIE=?
+2015-03-13 21:03:24,363 DEBUG main org.hibernate.loader.entity.EntityLoader - Static select for action ACTION_REFRESH on entity categorie.Categorie: select categorie0_.NUMCATEGORIE as NUMCATEG1_0_0_, categorie0_.NOMCATEGORIE as NOMCATEG2_0_0_, categorie0_.NBCATEGORIE as NBCATEGO3_0_0_ from CATEGORIE categorie0_ where categorie0_.NUMCATEGORIE=?
+2015-03-13 21:03:24,365 DEBUG main org.hibernate.loader.entity.EntityLoader - Static select for entity evenementcategorie.EvenementCategorie [NONE]: select evenementc0_.PRIX as PRIX2_2_, evenementc0_.EVENEMENTB as EVENEMENTB2_2_, categorie1_.NUMCATEGORIE as NUMCATEG1_0_0_, categorie1_.NOMCATEGORIE as NOMCATEG2_0_0_, categorie1_.NBCATEGORIE as NBCATEGO3_0_0_, evenement2_.NUMEVENEMENT as NUMEVENE1_1_1_, evenement2_.NOMEVENEMENT as NOMEVENE2_1_1_, evenement2_.QTESTOCK as QTESTOCK1_1_, evenement2_.PRIXMIN as PRIXMIN1_1_ from EVENEMENTCATEGORIE evenementc0_ left outer join CATEGORIE categorie1_ on evenementc0_.PRIX=categorie1_.NUMCATEGORIE left outer join EVENEMENT evenement2_ on evenementc0_.EVENEMENTB=evenement2_.NUMEVENEMENT where evenementc0_.PRIX=?
+2015-03-13 21:03:24,366 DEBUG main org.hibernate.loader.entity.EntityLoader - Static select for entity evenementcategorie.EvenementCategorie [READ]: select evenementc0_.PRIX as PRIX2_2_, evenementc0_.EVENEMENTB as EVENEMENTB2_2_, categorie1_.NUMCATEGORIE as NUMCATEG1_0_0_, categorie1_.NOMCATEGORIE as NOMCATEG2_0_0_, categorie1_.NBCATEGORIE as NBCATEGO3_0_0_, evenement2_.NUMEVENEMENT as NUMEVENE1_1_1_, evenement2_.NOMEVENEMENT as NOMEVENE2_1_1_, evenement2_.QTESTOCK as QTESTOCK1_1_, evenement2_.PRIXMIN as PRIXMIN1_1_ from EVENEMENTCATEGORIE evenementc0_ left outer join CATEGORIE categorie1_ on evenementc0_.PRIX=categorie1_.NUMCATEGORIE left outer join EVENEMENT evenement2_ on evenementc0_.EVENEMENTB=evenement2_.NUMEVENEMENT where evenementc0_.PRIX=?
+2015-03-13 21:03:24,366 DEBUG main org.hibernate.loader.entity.EntityLoader - Static select for entity evenementcategorie.EvenementCategorie [UPGRADE]: select evenementc0_.PRIX as PRIX2_0_, evenementc0_.EVENEMENTB as EVENEMENTB2_0_ from EVENEMENTCATEGORIE evenementc0_ where evenementc0_.PRIX=? for update
+2015-03-13 21:03:24,366 DEBUG main org.hibernate.loader.entity.EntityLoader - Static select for entity evenementcategorie.EvenementCategorie [UPGRADE_NOWAIT]: select evenementc0_.PRIX as PRIX2_0_, evenementc0_.EVENEMENTB as EVENEMENTB2_0_ from EVENEMENTCATEGORIE evenementc0_ where evenementc0_.PRIX=? for update
+2015-03-13 21:03:24,366 DEBUG main org.hibernate.loader.entity.EntityLoader - Static select for entity evenementcategorie.EvenementCategorie [FORCE]: select evenementc0_.PRIX as PRIX2_0_, evenementc0_.EVENEMENTB as EVENEMENTB2_0_ from EVENEMENTCATEGORIE evenementc0_ where evenementc0_.PRIX=? for update
+2015-03-13 21:03:24,367 DEBUG main org.hibernate.loader.entity.EntityLoader - Static select for entity evenementcategorie.EvenementCategorie [PESSIMISTIC_READ]: select evenementc0_.PRIX as PRIX2_0_, evenementc0_.EVENEMENTB as EVENEMENTB2_0_ from EVENEMENTCATEGORIE evenementc0_ where evenementc0_.PRIX=? lock in share mode
+2015-03-13 21:03:24,367 DEBUG main org.hibernate.loader.entity.EntityLoader - Static select for entity evenementcategorie.EvenementCategorie [PESSIMISTIC_WRITE]: select evenementc0_.PRIX as PRIX2_0_, evenementc0_.EVENEMENTB as EVENEMENTB2_0_ from EVENEMENTCATEGORIE evenementc0_ where evenementc0_.PRIX=? for update
+2015-03-13 21:03:24,367 DEBUG main org.hibernate.loader.entity.EntityLoader - Static select for entity evenementcategorie.EvenementCategorie [PESSIMISTIC_FORCE_INCREMENT]: select evenementc0_.PRIX as PRIX2_0_, evenementc0_.EVENEMENTB as EVENEMENTB2_0_ from EVENEMENTCATEGORIE evenementc0_ where evenementc0_.PRIX=? for update
+2015-03-13 21:03:24,367 DEBUG main org.hibernate.loader.entity.EntityLoader - Static select for action ACTION_MERGE on entity evenementcategorie.EvenementCategorie: select evenementc0_.PRIX as PRIX2_0_, evenementc0_.EVENEMENTB as EVENEMENTB2_0_ from EVENEMENTCATEGORIE evenementc0_ where evenementc0_.PRIX=?
+2015-03-13 21:03:24,367 DEBUG main org.hibernate.loader.entity.EntityLoader - Static select for action ACTION_REFRESH on entity evenementcategorie.EvenementCategorie: select evenementc0_.PRIX as PRIX2_0_, evenementc0_.EVENEMENTB as EVENEMENTB2_0_ from EVENEMENTCATEGORIE evenementc0_ where evenementc0_.PRIX=?
+2015-03-13 21:03:24,371 DEBUG main org.hibernate.impl.SessionFactoryObjectFactory - initializing class SessionFactoryObjectFactory
+2015-03-13 21:03:24,372 DEBUG main org.hibernate.impl.SessionFactoryObjectFactory - registered: 4028b8814c14bbee014c14bbf4500000 (unnamed)
+2015-03-13 21:03:24,373 INFO main org.hibernate.impl.SessionFactoryObjectFactory - Not binding factory to JNDI, no JNDI name configured
+2015-03-13 21:03:24,373 DEBUG main org.hibernate.impl.SessionFactoryImpl - instantiated session factory
+2015-03-13 21:03:24,377 DEBUG main org.hibernate.cfg.Configuration - processing extends queue
+2015-03-13 21:03:24,377 DEBUG main org.hibernate.cfg.Configuration - processing collection mappings
+2015-03-13 21:03:24,377 DEBUG main org.hibernate.cfg.Configuration - processing native query and ResultSetMapping mappings
+2015-03-13 21:03:24,377 DEBUG main org.hibernate.cfg.Configuration - processing association property references
+2015-03-13 21:03:24,377 DEBUG main org.hibernate.cfg.Configuration - processing foreign key constraints
+2015-03-13 21:03:24,377 DEBUG main org.hibernate.cfg.Configuration - resolving reference to class: evenement.Evenement
+2015-03-13 21:03:24,378 DEBUG main org.hibernate.id.factory.DefaultIdentifierGeneratorFactory - Setting dialect [org.hibernate.dialect.MySQLDialect]
+2015-03-13 21:03:24,378 DEBUG main org.hibernate.id.factory.DefaultIdentifierGeneratorFactory - Setting dialect [org.hibernate.dialect.MySQLDialect]
+2015-03-13 21:03:24,378 DEBUG main org.hibernate.id.factory.DefaultIdentifierGeneratorFactory - Setting dialect [org.hibernate.dialect.MySQLDialect]
+2015-03-13 21:03:24,379 DEBUG main org.hibernate.cfg.Configuration - processing extends queue
+2015-03-13 21:03:24,379 DEBUG main org.hibernate.cfg.Configuration - processing collection mappings
+2015-03-13 21:03:24,379 DEBUG main org.hibernate.cfg.Configuration - processing native query and ResultSetMapping mappings
+2015-03-13 21:03:24,379 DEBUG main org.hibernate.cfg.Configuration - processing association property references
+2015-03-13 21:03:24,379 DEBUG main org.hibernate.cfg.Configuration - processing foreign key constraints
+2015-03-13 21:03:24,379 DEBUG main org.hibernate.cfg.Configuration - resolving reference to class: evenement.Evenement
+2015-03-13 21:03:24,379 DEBUG main org.hibernate.id.factory.DefaultIdentifierGeneratorFactory - Setting dialect [org.hibernate.dialect.MySQLDialect]
+2015-03-13 21:03:24,379 DEBUG main org.hibernate.id.factory.DefaultIdentifierGeneratorFactory - Setting dialect [org.hibernate.dialect.MySQLDialect]
+2015-03-13 21:03:24,379 DEBUG main org.hibernate.id.factory.DefaultIdentifierGeneratorFactory - Setting dialect [org.hibernate.dialect.MySQLDialect]
+2015-03-13 21:03:24,380 DEBUG main org.hibernate.id.factory.DefaultIdentifierGeneratorFactory - Setting dialect [org.hibernate.dialect.MySQLDialect]
+2015-03-13 21:03:24,380 DEBUG main org.hibernate.id.factory.DefaultIdentifierGeneratorFactory - Setting dialect [org.hibernate.dialect.MySQLDialect]
+2015-03-13 21:03:24,380 DEBUG main org.hibernate.id.factory.DefaultIdentifierGeneratorFactory - Setting dialect [org.hibernate.dialect.MySQLDialect]
+2015-03-13 21:03:24,385 INFO main org.hibernate.tool.hbm2ddl.SchemaExport - Running hbm2ddl schema export
+2015-03-13 21:03:24,386 DEBUG main org.hibernate.tool.hbm2ddl.SchemaExport - import file not found: /import.sql
+2015-03-13 21:03:24,386 INFO main org.hibernate.tool.hbm2ddl.SchemaExport - exporting generated schema to database
+2015-03-13 21:03:24,386 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:mysql://localHost/Etick]
+2015-03-13 21:03:24,401 DEBUG main org.hibernate.tool.hbm2ddl.SchemaExport - alter table EVENEMENTCATEGORIE drop foreign key FK7BD418EE7D5DDC1D
+2015-03-13 21:03:24,715 DEBUG main org.hibernate.tool.hbm2ddl.SchemaExport - drop table if exists CATEGORIE
+2015-03-13 21:03:24,767 DEBUG main org.hibernate.tool.hbm2ddl.SchemaExport - drop table if exists EVENEMENT
+2015-03-13 21:03:24,806 DEBUG main org.hibernate.tool.hbm2ddl.SchemaExport - drop table if exists EVENEMENTCATEGORIE
+2015-03-13 21:03:24,846 DEBUG main org.hibernate.tool.hbm2ddl.SchemaExport - create table CATEGORIE (NUMCATEGORIE integer not null, NOMCATEGORIE varchar(255), NBCATEGORIE integer, primary key (NUMCATEGORIE))
+2015-03-13 21:03:24,977 DEBUG main org.hibernate.tool.hbm2ddl.SchemaExport - create table EVENEMENT (NUMEVENEMENT integer not null, NOMEVENEMENT varchar(255), QTESTOCK integer, PRIXMIN integer, primary key (NUMEVENEMENT))
+2015-03-13 21:03:25,077 DEBUG main org.hibernate.tool.hbm2ddl.SchemaExport - create table EVENEMENTCATEGORIE (PRIX integer not null, EVENEMENTB integer, primary key (PRIX))
+2015-03-13 21:03:25,166 DEBUG main org.hibernate.tool.hbm2ddl.SchemaExport - alter table EVENEMENTCATEGORIE add index FK7BD418EE7D5DDC1D (EVENEMENTB), add constraint FK7BD418EE7D5DDC1D foreign key (EVENEMENTB) references EVENEMENT (NUMEVENEMENT)
+2015-03-13 21:03:25,511 INFO main org.hibernate.tool.hbm2ddl.SchemaExport - schema export complete
+2015-03-13 21:03:25,513 DEBUG main org.hibernate.impl.SessionFactoryImpl - Checking 0 named HQL queries
+2015-03-13 21:03:25,513 DEBUG main org.hibernate.impl.SessionFactoryImpl - Checking 0 named SQL queries
+2015-03-13 21:03:25,516 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'sessionFactory'
+2015-03-13 21:03:25,517 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'categorieService'
+2015-03-13 21:03:25,517 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'categorieService'
+2015-03-13 21:03:25,518 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'categorieService' to allow for resolving potential circular references
+2015-03-13 21:03:25,518 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'categorieDao'
+2015-03-13 21:03:25,518 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'categorieDao'
+2015-03-13 21:03:25,519 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'categorieDao' to allow for resolving potential circular references
+2015-03-13 21:03:25,519 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'sessionFactory'
+2015-03-13 21:03:25,534 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'categorieDao'
+2015-03-13 21:03:25,534 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'categorieDao'
+2015-03-13 21:03:25,538 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'categorieService'
+2015-03-13 21:03:25,538 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'categorieDao'
+2015-03-13 21:03:25,538 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'evenementService'
+2015-03-13 21:03:25,538 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'evenementService'
+2015-03-13 21:03:25,538 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'evenementService' to allow for resolving potential circular references
+2015-03-13 21:03:25,538 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'evenementDao'
+2015-03-13 21:03:25,538 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'evenementDao'
+2015-03-13 21:03:25,539 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'evenementDao' to allow for resolving potential circular references
+2015-03-13 21:03:25,539 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'sessionFactory'
+2015-03-13 21:03:25,547 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'evenementDao'
+2015-03-13 21:03:25,548 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'evenementDao'
+2015-03-13 21:03:25,551 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'evenementService'
+2015-03-13 21:03:25,551 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'evenementDao'
+2015-03-13 21:03:25,551 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'evenementcategorieService'
+2015-03-13 21:03:25,552 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'evenementcategorieService'
+2015-03-13 21:03:25,552 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'evenementcategorieService' to allow for resolving potential circular references
+2015-03-13 21:03:25,552 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'evenementcategorieDao'
+2015-03-13 21:03:25,552 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'evenementcategorieDao'
+2015-03-13 21:03:25,552 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'evenementcategorieDao' to allow for resolving potential circular references
+2015-03-13 21:03:25,552 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'sessionFactory'
+2015-03-13 21:03:25,560 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'evenementcategorieDao'
+2015-03-13 21:03:25,560 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'evenementcategorieDao'
+2015-03-13 21:03:25,563 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'evenementcategorieService'
+2015-03-13 21:03:25,563 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'evenementcategorieDao'
+2015-03-13 21:03:25,565 DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@7dcbf94b]
+2015-03-13 21:03:25,565 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+2015-03-13 21:03:25,567 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'categorieService'
+2015-03-13 21:03:25,587 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Opening Hibernate Session
+2015-03-13 21:03:25,637 DEBUG main org.hibernate.impl.SessionImpl - opened session at timestamp: 14262770055
+2015-03-13 21:03:25,645 DEBUG main org.hibernate.id.IncrementGenerator - fetching initial value: select max(NUMCATEGORIE) from CATEGORIE
+2015-03-13 21:03:25,645 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2015-03-13 21:03:25,645 DEBUG main org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+2015-03-13 21:03:25,645 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:mysql://localHost/Etick]
+2015-03-13 21:03:25,659 DEBUG main org.hibernate.SQL - select max(NUMCATEGORIE) from CATEGORIE
+2015-03-13 21:03:25,673 DEBUG main org.hibernate.id.IncrementGenerator - first free id: 1
+2015-03-13 21:03:25,673 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2015-03-13 21:03:25,673 DEBUG main org.hibernate.event.def.AbstractSaveEventListener - generated identifier: 1, using strategy: org.hibernate.id.IncrementGenerator
+2015-03-13 21:03:25,704 DEBUG main org.springframework.orm.hibernate3.HibernateTemplate - Eagerly flushing Hibernate session
+2015-03-13 21:03:25,705 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
+2015-03-13 21:03:25,705 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
+2015-03-13 21:03:25,708 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+2015-03-13 21:03:25,708 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2015-03-13 21:03:25,709 DEBUG main org.hibernate.pretty.Printer - listing entities:
+2015-03-13 21:03:25,709 DEBUG main org.hibernate.pretty.Printer - categorie.Categorie{nbCategorie=4, numCategorie=1, nomCategorie=C}
+2015-03-13 21:03:25,714 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2015-03-13 21:03:25,714 DEBUG main org.hibernate.SQL - insert into CATEGORIE (NOMCATEGORIE, NBCATEGORIE, NUMCATEGORIE) values (?, ?, ?)
+2015-03-13 21:03:25,715 DEBUG main org.hibernate.jdbc.AbstractBatcher - Executing batch size: 1
+2015-03-13 21:03:25,788 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2015-03-13 21:03:25,788 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Closing Hibernate Session
+2015-03-13 21:03:25,788 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+2015-03-13 21:03:25,788 DEBUG main org.hibernate.jdbc.ConnectionManager - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+2015-03-13 21:03:25,791 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'evenementService'
+2015-03-13 21:03:25,791 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Opening Hibernate Session
+2015-03-13 21:03:25,791 DEBUG main org.hibernate.impl.SessionImpl - opened session at timestamp: 14262770057
+2015-03-13 21:03:25,791 DEBUG main org.hibernate.id.IncrementGenerator - fetching initial value: select max(NUMEVENEMENT) from EVENEMENT
+2015-03-13 21:03:25,791 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2015-03-13 21:03:25,791 DEBUG main org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+2015-03-13 21:03:25,791 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:mysql://localHost/Etick]
+2015-03-13 21:03:25,815 DEBUG main org.hibernate.SQL - select max(NUMEVENEMENT) from EVENEMENT
+2015-03-13 21:03:25,816 DEBUG main org.hibernate.id.IncrementGenerator - first free id: 1
+2015-03-13 21:03:25,816 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2015-03-13 21:03:25,816 DEBUG main org.hibernate.event.def.AbstractSaveEventListener - generated identifier: 1, using strategy: org.hibernate.id.IncrementGenerator
+2015-03-13 21:03:25,817 DEBUG main org.springframework.orm.hibernate3.HibernateTemplate - Eagerly flushing Hibernate session
+2015-03-13 21:03:25,817 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
+2015-03-13 21:03:25,817 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
+2015-03-13 21:03:25,817 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+2015-03-13 21:03:25,817 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2015-03-13 21:03:25,817 DEBUG main org.hibernate.pretty.Printer - listing entities:
+2015-03-13 21:03:25,817 DEBUG main org.hibernate.pretty.Printer - evenement.Evenement{qteStock=20, nomEvenement=Match, prixMin=25, numEvenement=1}
+2015-03-13 21:03:25,817 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2015-03-13 21:03:25,817 DEBUG main org.hibernate.SQL - insert into EVENEMENT (NOMEVENEMENT, QTESTOCK, PRIXMIN, NUMEVENEMENT) values (?, ?, ?, ?)
+2015-03-13 21:03:25,817 DEBUG main org.hibernate.jdbc.AbstractBatcher - Executing batch size: 1
+2015-03-13 21:03:25,889 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2015-03-13 21:03:25,889 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Closing Hibernate Session
+2015-03-13 21:03:25,889 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+2015-03-13 21:03:25,889 DEBUG main org.hibernate.jdbc.ConnectionManager - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+2015-03-13 21:03:25,889 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'evenementcategorieService'
+2015-03-13 21:03:25,889 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Opening Hibernate Session
+2015-03-13 21:03:25,890 DEBUG main org.hibernate.impl.SessionImpl - opened session at timestamp: 14262770058
+2015-03-13 21:03:25,890 DEBUG main org.hibernate.id.IncrementGenerator - fetching initial value: select max(PRIX) from EVENEMENTCATEGORIE
+2015-03-13 21:03:25,890 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2015-03-13 21:03:25,890 DEBUG main org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+2015-03-13 21:03:25,890 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:mysql://localHost/Etick]
+2015-03-13 21:03:25,904 DEBUG main org.hibernate.SQL - select max(PRIX) from EVENEMENTCATEGORIE
+2015-03-13 21:03:25,905 DEBUG main org.hibernate.id.IncrementGenerator - first free id: 1
+2015-03-13 21:03:25,905 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2015-03-13 21:03:25,905 DEBUG main org.hibernate.event.def.AbstractSaveEventListener - generated identifier: 1, using strategy: org.hibernate.id.IncrementGenerator
+2015-03-13 21:03:25,907 DEBUG main org.springframework.orm.hibernate3.HibernateTemplate - Eagerly flushing Hibernate session
+2015-03-13 21:03:25,907 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
+2015-03-13 21:03:25,907 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
+2015-03-13 21:03:25,907 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+2015-03-13 21:03:25,907 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2015-03-13 21:03:25,907 DEBUG main org.hibernate.pretty.Printer - listing entities:
+2015-03-13 21:03:25,908 DEBUG main org.hibernate.pretty.Printer - evenementcategorie.EvenementCategorie{evenementB=evenement.Evenement#1, categorieA=categorie.Categorie#1, prix=1}
+2015-03-13 21:03:25,908 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2015-03-13 21:03:25,908 DEBUG main org.hibernate.SQL - insert into EVENEMENTCATEGORIE (EVENEMENTB, PRIX) values (?, ?)
+2015-03-13 21:03:25,908 DEBUG main org.hibernate.jdbc.AbstractBatcher - Executing batch size: 1
+2015-03-13 21:03:25,943 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2015-03-13 21:03:25,943 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Closing Hibernate Session
+2015-03-13 21:03:25,944 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+2015-03-13 21:03:25,944 DEBUG main org.hibernate.jdbc.ConnectionManager - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
