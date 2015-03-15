@@ -3,72 +3,94 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
 
- <!-- data source -->
- <bean id="dataSource"         class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-      <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-      <property name="url" value="jdbc:mysql://localHost/Etick" />
-      <property name="username" value="root" /> 
-      <property name="password" value="root" />
-   </bean>   
-          
-  <!-- session factory -->
-  <bean id="sessionFactory"     class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
-         <property name="dataSource"> 
-               <ref bean="dataSource"/>
-         </property>
+	<!-- data source -->
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localHost/Etick" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+	</bean>
 
-         <property name="hibernateProperties">  
-               <props> 
-                        <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>          
-                        <prop key="hibernate.show_sql">true</prop>  
-                         <prop key="hibernate.hbm2ddl.auto">create</prop> 
-                </props> 
-         </property>
-         <property name="mappingResources">
-              <list> 
-                         <value>/Categorie.hbm.xml</value>
-                         <value>/Evenement.hbm.xml</value>
-                         <value>/EvenementCategorie.hbm.xml</value>
-                         <value>/Client.hbm.xml</value>
-              </list>       
-         </property> 
-  </bean>
-  
-  <bean id="categorieService" class="service.ServiceCategorie" >
-           <property name="categorieDao" ref="categorieDao" /> 
-  </bean>  
-  
-  <!-- Data Access Object --> 
-  <bean id="categorieDao" class="dao.DAOCategorie" >
-           <property name="sessionFactory" ref="sessionFactory"/>    
-  </bean>   
-  
-  <bean id="evenementService" class="service.ServiceEvenement" >
-           <property name="evenementDao" ref="evenementDao" /> 
-  </bean>  
-  
-  <!-- Data Access Object --> 
-  <bean id="evenementDao" class="dao.DAOEvenement" >
-           <property name="sessionFactory" ref="sessionFactory"/>    
-  </bean>   
-  
-  <bean id="evenementcategorieService" class="service.ServiceEvenementCategorie" >
-           <property name="evenementcategorieDao" ref="evenementcategorieDao" /> 
-  </bean>  
-  
-  <!-- Data Access Object --> 
-  <bean id="evenementcategorieDao" class="dao.DAOEvenementCategorie" >
-           <property name="sessionFactory" ref="sessionFactory"/>    
-  </bean>   
-  
-    <bean id="clientService" class="service.ServiceClient" >
-           <property name="ClientDao" ref="clientDao" /> 
-  </bean>  
-  
-  <!-- Data Access Object --> 
-  <bean id="clientDao" class="dao.DAOClient" >
-           <property name="sessionFactory" ref="sessionFactory"/>    
-  </bean>   
+	<!-- session factory -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">create</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>/Categorie.hbm.xml</value>
+				<value>/Evenement.hbm.xml</value>
+				<value>/EvenementCategorie.hbm.xml</value>
+				<value>/Client.hbm.xml</value>
+				<value>/Commande.hbm.xml</value>
+				<value>/Date.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="categorieService" class="service.ServiceCategorie">
+		<property name="categorieDao" ref="categorieDao" />
+	</bean>
+
+	<!-- Data Access Object -->
+	<bean id="categorieDao" class="dao.DAOCategorie">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="evenementService" class="service.ServiceEvenement">
+		<property name="evenementDao" ref="evenementDao" />
+	</bean>
+
+	<!-- Data Access Object -->
+	<bean id="evenementDao" class="dao.DAOEvenement">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="evenementcategorieService" class="service.ServiceEvenementCategorie">
+		<property name="evenementcategorieDao" ref="evenementcategorieDao" />
+	</bean>
+
+	<!-- Data Access Object -->
+	<bean id="evenementcategorieDao" class="dao.DAOEvenementCategorie">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="clientService" class="service.ServiceClient">
+		<property name="ClientDao" ref="clientDao" />
+	</bean>
+
+	<!-- Data Access Object -->
+	<bean id="clientDao" class="dao.DAOClient">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="commandeService" class="service.ServiceCommande">
+		<property name="commandeDao" ref="commandeDao" />
+	</bean>
+
+	<!-- Data Access Object -->
+	<bean id="commandeDao" class="dao.DAOCommande">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="dateService" class="service.ServiceDate">
+		<property name="dateDao" ref="DateDao" />
+	</bean>
+
+	<!-- Data Access Object -->
+	<bean id="DateDao" class="dao.DAODate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
 
 
 </beans>

@@ -1,8 +1,12 @@
 package model;
 
 
+
 import java.util.Collection;
 
+
+
+import java.util.Date;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -47,14 +51,14 @@ sauve(c);
 		
 		ApplicationContext context= new ClassPathXmlApplicationContext("beans.xml");
 		
-		IServiceObject categorieService=(IServiceObject)context.getBean("categorieService");
+	/*	IServiceObject categorieService=(IServiceObject)context.getBean("categorieService");
 		EvenementCategorie ec = new EvenementCategorie();
 		
 		Categorie c = new Categorie();
 		c.setNbCategorie(4);
 		c.setNomCategorie("C");
 		categorieService.create(c);
-		
+	*/	
 		// Evenement :
 	
 		IServiceObject evenementService=(IServiceObject)context.getBean("evenementService");
@@ -62,9 +66,10 @@ sauve(c);
 		e.setNomEvenement("Match");
 		e.setPrixMin(25);
 		e.setQteStock(20);
+		
 		evenementService.create(e);
 		
-		IServiceObject evenementcategorieService=(IServiceObject)context.getBean("evenementcategorieService");
+	/*	IServiceObject evenementcategorieService=(IServiceObject)context.getBean("evenementcategorieService");
 		EvenementCategorie evc = new EvenementCategorie();
 		evc.setPrix(123);
 		e.setNumEvenement(1);
@@ -72,11 +77,28 @@ sauve(c);
 		evc.setEvenementB(e);
 		evc.setCategorieA(c);
 		evenementcategorieService.create(evc);
-		
+	*/	
 		IServiceObject ClientService=(IServiceObject)context.getBean("clientService");
 		Client Cl = new Client();
-		Cl.setNomClient("LASFAR");
+		Cl.setNomClient("Client");
 		ClientService.create(Cl);
+		
+		
+		
+		IServiceObject DateService=(IServiceObject)context.getBean("dateService");
+		Date_E D = new Date_E();
+		
+		Date datedebut= new Date(2005,01,15);
+	    D.setDateDebut(datedebut);
+
+	    DateService.create(D);
+		
+		
+		IServiceObject CommandeService=(IServiceObject)context.getBean("commandeService");
+		Commande Co = new Commande();
+		Co.setDateCommande(datedebut);
+		CommandeService.create(Co);
+		
 	}
 	
 	    

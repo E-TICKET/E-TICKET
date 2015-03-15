@@ -12,43 +12,43 @@ public class Seance {
  
    public int numSeance;
 
-   public Date heureDebut;
+   public Date_E heureDebut;
 
-   public Date heureFin;
+   public Date_E heureFin;
    
  
-   public Collection<Date> date;
+   public Collection<Date_E> date;
    
    
 
-   public Collection<Date> getDate() {
+   public Collection<Date_E> getDate() {
       if (date == null)
-         date = new HashSet<Date>();
+         date = new HashSet<Date_E>();
       return date;
    }
    
    /** @pdGenerated default iterator getter */
    public Iterator getIteratorDate() {
       if (date == null)
-         date = new HashSet<Date>();
+         date = new HashSet<Date_E>();
       return date.iterator();
    }
    
    /** @pdGenerated default setter
      * @param newDate */
-   public void setDate(Collection<Date> newDate) {
+   public void setDate(Collection<Date_E> newDate) {
       removeAllDate();
       for (Iterator iter = newDate.iterator(); iter.hasNext();)
-         addDate((Date)iter.next());
+         addDate((Date_E)iter.next());
    }
    
    /** @pdGenerated default add
      * @param newDate */
-   public void addDate(Date newDate) {
+   public void addDate(Date_E newDate) {
       if (newDate == null)
          return;
       if (this.date == null)
-         this.date = new HashSet<Date>();
+         this.date = new HashSet<Date_E>();
       if (!this.date.contains(newDate))
       {
          this.date.add(newDate);
@@ -58,7 +58,7 @@ public class Seance {
    
    /** @pdGenerated default remove
      * @param oldDate */
-   public void removeDate(Date oldDate) {
+   public void removeDate(Date_E oldDate) {
       if (oldDate == null)
          return;
       if (this.date != null)
@@ -73,10 +73,10 @@ public class Seance {
    public void removeAllDate() {
       if (date != null)
       {
-         Date oldDate;
+         Date_E oldDate;
          for (Iterator iter = getIteratorDate(); iter.hasNext();)
          {
-            oldDate = (Date)iter.next();
+            oldDate = (Date_E)iter.next();
             iter.remove();
             oldDate.removeSeance(this);
          }

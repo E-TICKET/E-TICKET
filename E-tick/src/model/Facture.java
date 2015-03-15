@@ -11,9 +11,9 @@ public class Facture {
  
    public String numFacture;
 
-   public Date dateFacture;
+   public Date_E dateFacture;
 
-   public Date datePaiement;
+   public Date_E datePaiement;
 
    public int montantFacture;
 

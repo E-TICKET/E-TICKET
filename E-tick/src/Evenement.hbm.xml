@@ -24,13 +24,11 @@
             <element type="string">
                 <column name="LIGNECOMMANDE" />
             </element>
-        </bag> -->
-       <!-- <bag name="date" table="DATE" inverse="false" lazy="true">
-            <key>
-                <column name="NUMEVENEMENT" />
-            </key>
-            <one-to-many class="model.Date" />
-        </bag>-->
+        </bag> 
+         <many-to-one name="date" class="model.Date_E" fetch="join">
+            <column name="DATE" />
+        </many-to-one> 
+        -->
         <!-- <bag name="evenementCategorie" table="EVENEMENT" inverse="false" lazy="true" access="field">
             <key>
                 <column name="NUMEVENEMENT" />
