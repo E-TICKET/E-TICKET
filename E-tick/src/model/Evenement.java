@@ -18,10 +18,10 @@ public class Evenement {
 
    public int prixMin;
    
-   public Collection ligneCommande;
+   public Collection<LigneCommande> ligneCommande;
    /** @pdRoleInfo migr=no name=Date assc=evenementDate coll=java.util.Collection impl=java.util.HashSet mult=1..* */
    public Date_E date;
-   public Collection evenementCategorie;
+   public Collection<EvenementCategorie> evenementCategorie;
    
    
    

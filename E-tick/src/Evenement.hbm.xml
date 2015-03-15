@@ -17,15 +17,15 @@
         <property name="prixMin" type="int" access="field">
             <column name="PRIXMIN" />
         </property>
-        <!-- <bag name="ligneCommande" table="EVENEMENT" inverse="false" lazy="true" access="field">
+        <!--   <bag name="ligneCommande" table="EVENEMENT" inverse="false" lazy="true" access="field">
             <key>
                 <column name="NUMEVENEMENT" />
             </key>
-            <element type="string">
-                <column name="LIGNECOMMANDE" />
+            <element type="int">
+                <column name="NUM_LIGNECOMMANDE" />
             </element>
-        </bag> 
-         <many-to-one name="date" class="model.Date_E" fetch="join">
+        </bag> -->
+       <!--  <many-to-one name="date" class="model.Date_E" fetch="join">
             <column name="DATE" />
         </many-to-one> 
         -->

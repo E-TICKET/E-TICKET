@@ -5,6 +5,7 @@ package model;
  * Purpose: Defines the Class Seance
  ***********************************************************************/
 
+import java.sql.Time;
 import java.util.*;
 
 
@@ -12,12 +13,25 @@ public class Seance {
  
    public int numSeance;
 
-   public Date_E heureDebut;
+   public Time heureDebut;
 
-   public Date_E heureFin;
+   public Time heureFin;
+  
    
  
-   public Collection<Date_E> date;
+   public void setNumSeance(int numSeance) {
+	this.numSeance = numSeance;
+}
+
+public void setHeureDebut(Time heureDebut) {
+	this.heureDebut = heureDebut;
+}
+
+public void setHeureFin(Time heureFin) {
+	this.heureFin = heureFin;
+}
+
+public Collection<Date_E> date;
    
    
 

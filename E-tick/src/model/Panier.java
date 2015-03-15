@@ -13,4 +13,20 @@ public class Panier {
    
    public LigneCommande ligneCommande;
 
+public int getNumPanier() {
+	return numPanier;
+}
+
+public void setNumPanier(int numPanier) {
+	this.numPanier = numPanier;
+}
+
+public LigneCommande getLigneCommande() {
+	return ligneCommande;
+}
+
+public void setLigneCommande(LigneCommande ligneCommande) {
+	this.ligneCommande = ligneCommande;
+}
+
 }

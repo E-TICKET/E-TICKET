@@ -12,7 +12,18 @@ package model;
 public class LigneCommande {
 
    public int qteCommandee; 
-   public Evenement evenementA;
-   public Panier panierB;
-
+   public Evenement evenement;
+   public Panier panier;
+   
+   
+public void setQteCommandee(int qteCommandee) {
+	this.qteCommandee = qteCommandee;
 }
+public void setEvenementA(Evenement evenementA) {
+	this.evenement = evenementA;
+}
+public void setPanier(Panier panier) {
+	this.panier = panier;
+}
+   
+  }

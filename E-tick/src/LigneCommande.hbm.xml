@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 15 mars 2015 19:59:54 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="model.LigneCommande" table="LIGNECOMMANDE">
+        <id name="qteCommandee" type="int" access="field">
+            <column name="QTECOMMANDEE" />
+            <generator class="increment" />
+        </id>
+        <many-to-one name="evenement" class="model.Evenement" access="field" fetch="join">
+            <column name="NUM_EVENEMENT" />
+        </many-to-one>
+        <one-to-one name="panier" class="model.Panier" access="field"></one-to-one>
+    </class>
+</hibernate-mapping>

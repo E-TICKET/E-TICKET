@@ -34,6 +34,9 @@
 				<value>/Client.hbm.xml</value>
 				<value>/Commande.hbm.xml</value>
 				<value>/Date.hbm.xml</value>
+				<value>/Panier.hbm.xml</value>
+				<value>/LigneCommande.hbm.xml</value>
+				<value>/Seance.hbm.xml</value>
 			</list>
 		</property>
 	</bean>
@@ -89,6 +92,33 @@
 
 	<!-- Data Access Object -->
 	<bean id="DateDao" class="dao.DAODate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="panierService" class="service.ServicePanier">
+		<property name="PanierDao" ref="PanierDao" />
+	</bean>
+
+	<!-- Data Access Object -->
+	<bean id="PanierDao" class="dao.DAOPanier">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="ligneCommandeService" class="service.ServiceLigneCommande">
+		<property name="LigneCommandeDao" ref="ligneCommandeDao" />
+	</bean>
+
+	<!-- Data Access Object -->
+	<bean id="ligneCommandeDao" class="dao.DAOLigneCommande">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="SeanceService" class="service.ServiceSeance">
+		<property name="seanceDao" ref="SeanceDao" />
+	</bean>
+
+	<!-- Data Access Object -->
+	<bean id="SeanceDao" class="dao.DAOSeance">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 
