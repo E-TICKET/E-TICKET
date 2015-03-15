@@ -46,6 +46,7 @@ sauve(c);
 		
 		
 		ApplicationContext context= new ClassPathXmlApplicationContext("beans.xml");
+		
 		IServiceObject categorieService=(IServiceObject)context.getBean("categorieService");
 		EvenementCategorie ec = new EvenementCategorie();
 		
@@ -71,5 +72,12 @@ sauve(c);
 		evc.setEvenementB(e);
 		evc.setCategorieA(c);
 		evenementcategorieService.create(evc);
+		
+		IServiceObject ClientService=(IServiceObject)context.getBean("clientService");
+		Client Cl = new Client();
+		Cl.setNomClient("LASFAR");
+		ClientService.create(Cl);
 	}
+	
+	    
 }
