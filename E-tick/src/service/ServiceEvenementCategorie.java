@@ -1,7 +1,7 @@
-package evenementcategorie;
+package service;
 
-import service.IDAOObject;
-import service.IServiceObject;
+import model.EvenementCategorie;
+import dao.IDAOObject;
 
 
 
@@ -14,19 +14,19 @@ public void setEvenementcategorieDao(IDAOObject evenementcategorieDao) {
 }
 
 @Override
-public void create(EvenementCategorie person) {
-	evenementcategorieDao.savePersonne(person);
+public void create(EvenementCategorie evc) {
+	evenementcategorieDao.save(evc);
 	
 }
 
 @Override
-public void delete(EvenementCategorie person) {
+public void delete(EvenementCategorie evc) {
 	// TODO Auto-generated method stub
 	
 }
 
 @Override
-public void update(EvenementCategorie person) {
+public void update(EvenementCategorie evc) {
 	// TODO Auto-generated method stub
 	
 }

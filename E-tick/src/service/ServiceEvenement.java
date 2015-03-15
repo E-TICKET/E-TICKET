@@ -1,7 +1,7 @@
-package evenement;
+package service;
 
-import service.IDAOObject;
-import service.IServiceObject;
+import dao.IDAOObject;
+import model.Evenement;
 
 
 
@@ -10,8 +10,8 @@ public class ServiceEvenement implements IServiceObject<Evenement>{
 IDAOObject evenementDao;
 	@Override
 	
-	public void create(Evenement person) {
-		evenementDao.savePersonne(person);
+	public void create(Evenement ev) {
+		evenementDao.save(ev);
 		
 	}
 
@@ -28,13 +28,13 @@ IDAOObject evenementDao;
 
 
 	@Override
-	public void delete(Evenement person) {
-		evenementDao.deletePersonne(person);
+	public void delete(Evenement ev) {
+		evenementDao.delete(ev);
 		
 	}
 
 	@Override
-	public void update(Evenement person) {
+	public void update(Evenement ev) {
 		//hdhd
 		
 	}

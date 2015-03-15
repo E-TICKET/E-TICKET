@@ -1,7 +1,7 @@
-package categorie;
+package service;
 
-import service.IDAOObject;
-import service.IServiceObject;
+import dao.IDAOObject;
+import model.Categorie;
 
 
 
@@ -10,8 +10,8 @@ public class ServiceCategorie implements IServiceObject<Categorie>{
 IDAOObject categorieDao;
 	@Override
 	
-	public void create(Categorie person) {
-		categorieDao.savePersonne(person);
+	public void create(Categorie c) {
+		categorieDao.save(c);
 		
 	}
 
@@ -22,13 +22,13 @@ IDAOObject categorieDao;
 
 
 	@Override
-	public void delete(Categorie person) {
-		categorieDao.deletePersonne(person);
+	public void delete(Categorie c) {
+		categorieDao.delete(c);
 		
 	}
 
 	@Override
-	public void update(Categorie person) {
+	public void update(Categorie c) {
 		//hdhd
 		
 	}

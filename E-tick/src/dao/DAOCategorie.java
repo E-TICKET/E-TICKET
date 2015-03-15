@@ -1,18 +1,19 @@
-package categorie;
+package dao;
+
+import model.Categorie;
 
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
-import service.IDAOObject;
 
 public class DAOCategorie extends HibernateDaoSupport implements IDAOObject<Categorie>{
 	@Override
-	public void savePersonne(Categorie personne) {
+	public void save(Categorie c) {
 		// TODO Auto-generated method stub
-		getHibernateTemplate().save(personne);
+		getHibernateTemplate().save(c);
 	}
 
 	@Override
-	public void deletePersonne(Categorie personne) {
+	public void delete(Categorie c) {
 		// TODO Auto-generated method stub
 		
 	}

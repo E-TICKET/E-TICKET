@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 13 mars 2015 16:50:09 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="evenement.Evenement" table="EVENEMENT">
+    <class name="model.Evenement" table="EVENEMENT">
         <id name="numEvenement" type="int" access="field">
             <column name="NUMEVENEMENT" />
             <generator class="increment" />

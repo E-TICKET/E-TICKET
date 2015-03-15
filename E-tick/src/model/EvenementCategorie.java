@@ -1,7 +1,5 @@
-package evenementcategorie;
+package model;
 
-import categorie.Categorie;
-import evenement.Evenement;
 
 /***********************************************************************
  * Module:  EvenementCategorie.java

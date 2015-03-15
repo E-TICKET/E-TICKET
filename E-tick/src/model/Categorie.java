@@ -1,8 +1,7 @@
-package categorie;
+package model;
 
 
 
-import evenementcategorie.EvenementCategorie;
 
 
 public class Categorie  {

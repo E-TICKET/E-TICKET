@@ -1,4 +1,4 @@
-package evenement;
+package model;
 /***********************************************************************
  * Module:  Evenement.java
  * Author:  Oussama
@@ -7,7 +7,6 @@ package evenement;
 
 import java.util.*;
 
-import model.Date;
 
 public class Evenement {
 

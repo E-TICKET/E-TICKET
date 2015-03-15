@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 13 mars 2015 16:50:09 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="categorie.Categorie" table="CATEGORIE">
+    <class name="model.Categorie" table="CATEGORIE">
         <id name="numCategorie" type="int">
             <column name="NUMCATEGORIE" />
             <generator class="increment" />
@@ -14,6 +14,6 @@
         <property name="nbCategorie" type="int">
             <column name="NBCATEGORIE" />
         </property>
-       <!--  <one-to-one name="evenementCategorie" class="model.EvenementCategorie"></one-to-one>-->
+         <one-to-one name="evenementCategorie" class="model.EvenementCategorie"></one-to-one>
     </class>
 </hibernate-mapping>

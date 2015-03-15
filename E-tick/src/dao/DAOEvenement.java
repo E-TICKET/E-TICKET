@@ -1,18 +1,19 @@
-package evenement;
+package dao;
+
+import model.Evenement;
 
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
-import service.IDAOObject;
 
 public class DAOEvenement extends HibernateDaoSupport implements IDAOObject<Evenement>{
 	@Override
-	public void savePersonne(Evenement personne) {
+	public void save(Evenement ev) {
 		// TODO Auto-generated method stub
-		getHibernateTemplate().save(personne);
+		getHibernateTemplate().save(ev);
 	}
 
 	@Override
-	public void deletePersonne(Evenement personne) {
+	public void delete(Evenement ev) {
 		// TODO Auto-generated method stub
 		
 	}

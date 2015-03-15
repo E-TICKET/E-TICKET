@@ -3,7 +3,6 @@ package model;
 
 import java.util.Collection;
 
-import hibern.HibernateUtil;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -15,9 +14,6 @@ import service.IServiceObject;
 
 
 
-import categorie.Categorie;
-import evenement.Evenement;
-import evenementcategorie.EvenementCategorie;
 
 public class Main {
 
