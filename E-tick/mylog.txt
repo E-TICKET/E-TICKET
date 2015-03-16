@@ -1,342 +1,141 @@
-2015-03-15 20:50:59,228 DEBUG main org.hibernate.tool.hbm2ddl.SchemaExport - alter table DATE_E add index FK77C4BFF4288C82CD (NUMSEANCE), add constraint FK77C4BFF4288C82CD foreign key (NUMSEANCE) references SEANCE (NUMSEANCE)
-2015-03-15 20:51:00,186 DEBUG main org.hibernate.tool.hbm2ddl.SchemaExport - alter table EVENEMENT add index FKA72F5A49F4FB6593 (NUMDATE_E), add constraint FKA72F5A49F4FB6593 foreign key (NUMDATE_E) references DATE_E (NUMDATE)
-2015-03-15 20:51:01,462 DEBUG main org.hibernate.tool.hbm2ddl.SchemaExport - alter table EVENEMENTCATEGORIE add index FK7BD418EEF349CF67 (NumEvenement), add constraint FK7BD418EEF349CF67 foreign key (NumEvenement) references EVENEMENT (NUMEVENEMENT)
-2015-03-15 20:51:02,583 DEBUG main org.hibernate.tool.hbm2ddl.SchemaExport - alter table EVENEMENTCATEGORIE add index FK7BD418EEABC4FD03 (NumCategorie), add constraint FK7BD418EEABC4FD03 foreign key (NumCategorie) references CATEGORIE (NUMCATEGORIE)
-2015-03-15 20:51:03,567 DEBUG main org.hibernate.tool.hbm2ddl.SchemaExport - alter table LIGNECOMMANDE add index FKBB8A071BA2485AB4 (NUM_EVENEMENT), add constraint FKBB8A071BA2485AB4 foreign key (NUM_EVENEMENT) references EVENEMENT (NUMEVENEMENT)
-2015-03-15 20:51:04,531 INFO main org.hibernate.tool.hbm2ddl.SchemaExport - schema export complete
-2015-03-15 20:51:04,531 DEBUG main org.hibernate.impl.SessionFactoryImpl - Checking 0 named HQL queries
-2015-03-15 20:51:04,531 DEBUG main org.hibernate.impl.SessionFactoryImpl - Checking 0 named SQL queries
-2015-03-15 20:51:04,531 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'sessionFactory'
-2015-03-15 20:51:04,547 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'categorieService'
-2015-03-15 20:51:04,547 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'categorieService'
-2015-03-15 20:51:04,547 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'categorieService' to allow for resolving potential circular references
-2015-03-15 20:51:04,547 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'categorieDao'
-2015-03-15 20:51:04,547 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'categorieDao'
-2015-03-15 20:51:04,548 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'categorieDao' to allow for resolving potential circular references
-2015-03-15 20:51:04,549 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'sessionFactory'
-2015-03-15 20:51:04,562 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'categorieDao'
-2015-03-15 20:51:04,562 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'categorieDao'
-2015-03-15 20:51:04,564 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'categorieService'
-2015-03-15 20:51:04,564 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'categorieDao'
-2015-03-15 20:51:04,564 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'evenementService'
-2015-03-15 20:51:04,564 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'evenementService'
-2015-03-15 20:51:04,565 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'evenementService' to allow for resolving potential circular references
-2015-03-15 20:51:04,565 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'evenementDao'
-2015-03-15 20:51:04,565 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'evenementDao'
-2015-03-15 20:51:04,565 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'evenementDao' to allow for resolving potential circular references
-2015-03-15 20:51:04,565 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'sessionFactory'
-2015-03-15 20:51:04,571 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'evenementDao'
-2015-03-15 20:51:04,571 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'evenementDao'
-2015-03-15 20:51:04,573 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'evenementService'
-2015-03-15 20:51:04,573 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'evenementDao'
-2015-03-15 20:51:04,573 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'evenementcategorieService'
-2015-03-15 20:51:04,573 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'evenementcategorieService'
-2015-03-15 20:51:04,574 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'evenementcategorieService' to allow for resolving potential circular references
-2015-03-15 20:51:04,574 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'evenementcategorieDao'
-2015-03-15 20:51:04,574 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'evenementcategorieDao'
-2015-03-15 20:51:04,574 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'evenementcategorieDao' to allow for resolving potential circular references
-2015-03-15 20:51:04,574 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'sessionFactory'
-2015-03-15 20:51:04,581 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'evenementcategorieDao'
-2015-03-15 20:51:04,581 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'evenementcategorieDao'
-2015-03-15 20:51:04,583 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'evenementcategorieService'
-2015-03-15 20:51:04,583 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'evenementcategorieDao'
-2015-03-15 20:51:04,583 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'clientService'
-2015-03-15 20:51:04,583 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'clientService'
-2015-03-15 20:51:04,583 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'clientService' to allow for resolving potential circular references
-2015-03-15 20:51:04,583 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'clientDao'
-2015-03-15 20:51:04,583 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'clientDao'
-2015-03-15 20:51:04,583 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'clientDao' to allow for resolving potential circular references
-2015-03-15 20:51:04,583 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'sessionFactory'
-2015-03-15 20:51:04,588 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'clientDao'
-2015-03-15 20:51:04,588 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'clientDao'
-2015-03-15 20:51:04,590 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'clientService'
-2015-03-15 20:51:04,590 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'clientDao'
-2015-03-15 20:51:04,590 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'commandeService'
-2015-03-15 20:51:04,591 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'commandeService'
-2015-03-15 20:51:04,591 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'commandeService' to allow for resolving potential circular references
-2015-03-15 20:51:04,591 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'commandeDao'
-2015-03-15 20:51:04,591 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'commandeDao'
-2015-03-15 20:51:04,591 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'commandeDao' to allow for resolving potential circular references
-2015-03-15 20:51:04,591 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'sessionFactory'
-2015-03-15 20:51:04,596 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'commandeDao'
-2015-03-15 20:51:04,596 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'commandeDao'
-2015-03-15 20:51:04,598 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'commandeService'
-2015-03-15 20:51:04,598 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'commandeDao'
-2015-03-15 20:51:04,598 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'dateService'
-2015-03-15 20:51:04,598 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'dateService'
-2015-03-15 20:51:04,598 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'dateService' to allow for resolving potential circular references
-2015-03-15 20:51:04,598 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'DateDao'
-2015-03-15 20:51:04,598 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'DateDao'
-2015-03-15 20:51:04,599 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'DateDao' to allow for resolving potential circular references
-2015-03-15 20:51:04,599 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'sessionFactory'
-2015-03-15 20:51:04,603 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'DateDao'
-2015-03-15 20:51:04,603 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'DateDao'
-2015-03-15 20:51:04,605 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'dateService'
-2015-03-15 20:51:04,605 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'DateDao'
-2015-03-15 20:51:04,606 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'panierService'
-2015-03-15 20:51:04,606 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'panierService'
-2015-03-15 20:51:04,606 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'panierService' to allow for resolving potential circular references
-2015-03-15 20:51:04,606 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'PanierDao'
-2015-03-15 20:51:04,606 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'PanierDao'
-2015-03-15 20:51:04,606 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'PanierDao' to allow for resolving potential circular references
-2015-03-15 20:51:04,606 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'sessionFactory'
-2015-03-15 20:51:04,614 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'PanierDao'
-2015-03-15 20:51:04,614 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'PanierDao'
-2015-03-15 20:51:04,617 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'panierService'
-2015-03-15 20:51:04,617 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'PanierDao'
-2015-03-15 20:51:04,617 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'ligneCommandeService'
-2015-03-15 20:51:04,617 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'ligneCommandeService'
-2015-03-15 20:51:04,617 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'ligneCommandeService' to allow for resolving potential circular references
-2015-03-15 20:51:04,617 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'ligneCommandeDao'
-2015-03-15 20:51:04,617 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'ligneCommandeDao'
-2015-03-15 20:51:04,618 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'ligneCommandeDao' to allow for resolving potential circular references
-2015-03-15 20:51:04,618 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'sessionFactory'
-2015-03-15 20:51:04,622 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'ligneCommandeDao'
-2015-03-15 20:51:04,622 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'ligneCommandeDao'
-2015-03-15 20:51:04,625 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'ligneCommandeService'
-2015-03-15 20:51:04,625 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'ligneCommandeDao'
-2015-03-15 20:51:04,625 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'SeanceService'
-2015-03-15 20:51:04,625 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'SeanceService'
-2015-03-15 20:51:04,625 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'SeanceService' to allow for resolving potential circular references
-2015-03-15 20:51:04,625 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'SeanceDao'
-2015-03-15 20:51:04,625 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'SeanceDao'
-2015-03-15 20:51:04,626 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'SeanceDao' to allow for resolving potential circular references
-2015-03-15 20:51:04,626 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'sessionFactory'
-2015-03-15 20:51:04,631 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'SeanceDao'
-2015-03-15 20:51:04,631 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'SeanceDao'
-2015-03-15 20:51:04,633 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'SeanceService'
-2015-03-15 20:51:04,633 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'SeanceDao'
-2015-03-15 20:51:04,634 DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@aaebbd2]
-2015-03-15 20:51:04,635 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
-2015-03-15 20:51:04,636 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'categorieService'
-2015-03-15 20:51:04,650 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Opening Hibernate Session
-2015-03-15 20:51:04,689 DEBUG main org.hibernate.impl.SessionImpl - opened session at timestamp: 14264490646
-2015-03-15 20:51:04,694 DEBUG main org.hibernate.id.IncrementGenerator - fetching initial value: select max(NUMCATEGORIE) from CATEGORIE
-2015-03-15 20:51:04,694 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
-2015-03-15 20:51:04,694 DEBUG main org.hibernate.jdbc.ConnectionManager - opening JDBC connection
-2015-03-15 20:51:04,694 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:mysql://localHost/Etick]
-2015-03-15 20:51:04,705 DEBUG main org.hibernate.SQL - select max(NUMCATEGORIE) from CATEGORIE
-2015-03-15 20:51:04,718 DEBUG main org.hibernate.id.IncrementGenerator - first free id: 1
-2015-03-15 20:51:04,718 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
-2015-03-15 20:51:04,718 DEBUG main org.hibernate.event.def.AbstractSaveEventListener - generated identifier: 1, using strategy: org.hibernate.id.IncrementGenerator
-2015-03-15 20:51:04,727 DEBUG main org.springframework.orm.hibernate3.HibernateTemplate - Eagerly flushing Hibernate session
-2015-03-15 20:51:04,728 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
-2015-03-15 20:51:04,729 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
-2015-03-15 20:51:04,731 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
-2015-03-15 20:51:04,731 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-2015-03-15 20:51:04,732 DEBUG main org.hibernate.pretty.Printer - listing entities:
-2015-03-15 20:51:04,732 DEBUG main org.hibernate.pretty.Printer - model.Categorie{nbCategorie=4, numCategorie=1, nomCategorie=C, evenementCategorie=null}
-2015-03-15 20:51:04,735 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
-2015-03-15 20:51:04,735 DEBUG main org.hibernate.SQL - insert into CATEGORIE (NOMCATEGORIE, NBCATEGORIE, NUMCATEGORIE) values (?, ?, ?)
-2015-03-15 20:51:04,736 DEBUG main org.hibernate.jdbc.AbstractBatcher - Executing batch size: 1
-2015-03-15 20:51:04,795 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
-2015-03-15 20:51:04,795 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Closing Hibernate Session
-2015-03-15 20:51:04,795 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
-2015-03-15 20:51:04,795 DEBUG main org.hibernate.jdbc.ConnectionManager - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
-2015-03-15 20:51:04,796 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'evenementService'
-2015-03-15 20:51:04,796 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Opening Hibernate Session
-2015-03-15 20:51:04,796 DEBUG main org.hibernate.impl.SessionImpl - opened session at timestamp: 14264490647
-2015-03-15 20:51:04,796 DEBUG main org.hibernate.id.IncrementGenerator - fetching initial value: select max(NUMEVENEMENT) from EVENEMENT
-2015-03-15 20:51:04,796 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
-2015-03-15 20:51:04,797 DEBUG main org.hibernate.jdbc.ConnectionManager - opening JDBC connection
-2015-03-15 20:51:04,797 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:mysql://localHost/Etick]
-2015-03-15 20:51:04,816 DEBUG main org.hibernate.SQL - select max(NUMEVENEMENT) from EVENEMENT
-2015-03-15 20:51:04,818 DEBUG main org.hibernate.id.IncrementGenerator - first free id: 1
-2015-03-15 20:51:04,818 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
-2015-03-15 20:51:04,818 DEBUG main org.hibernate.event.def.AbstractSaveEventListener - generated identifier: 1, using strategy: org.hibernate.id.IncrementGenerator
-2015-03-15 20:51:04,818 DEBUG main org.springframework.orm.hibernate3.HibernateTemplate - Eagerly flushing Hibernate session
-2015-03-15 20:51:04,818 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
-2015-03-15 20:51:04,818 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
-2015-03-15 20:51:04,818 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
-2015-03-15 20:51:04,818 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-2015-03-15 20:51:04,818 DEBUG main org.hibernate.pretty.Printer - listing entities:
-2015-03-15 20:51:04,819 DEBUG main org.hibernate.pretty.Printer - model.Evenement{qteStock=20, nomEvenement=Match, prixMin=25, numEvenement=1}
-2015-03-15 20:51:04,819 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
-2015-03-15 20:51:04,819 DEBUG main org.hibernate.SQL - insert into EVENEMENT (NOMEVENEMENT, QTESTOCK, PRIXMIN, NUMEVENEMENT) values (?, ?, ?, ?)
-2015-03-15 20:51:04,819 DEBUG main org.hibernate.jdbc.AbstractBatcher - Executing batch size: 1
-2015-03-15 20:51:04,871 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
-2015-03-15 20:51:04,872 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Closing Hibernate Session
-2015-03-15 20:51:04,872 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
-2015-03-15 20:51:04,872 DEBUG main org.hibernate.jdbc.ConnectionManager - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
-2015-03-15 20:51:04,872 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'evenementcategorieService'
-2015-03-15 20:51:04,872 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Opening Hibernate Session
-2015-03-15 20:51:04,872 DEBUG main org.hibernate.impl.SessionImpl - opened session at timestamp: 14264490648
-2015-03-15 20:51:04,872 DEBUG main org.hibernate.id.IncrementGenerator - fetching initial value: select max(NumEvenementCategorie) from EVENEMENTCATEGORIE
-2015-03-15 20:51:04,872 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
-2015-03-15 20:51:04,872 DEBUG main org.hibernate.jdbc.ConnectionManager - opening JDBC connection
-2015-03-15 20:51:04,872 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:mysql://localHost/Etick]
-2015-03-15 20:51:04,884 DEBUG main org.hibernate.SQL - select max(NumEvenementCategorie) from EVENEMENTCATEGORIE
-2015-03-15 20:51:04,885 DEBUG main org.hibernate.id.IncrementGenerator - first free id: 1
-2015-03-15 20:51:04,885 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
-2015-03-15 20:51:04,885 DEBUG main org.hibernate.event.def.AbstractSaveEventListener - generated identifier: 1, using strategy: org.hibernate.id.IncrementGenerator
-2015-03-15 20:51:04,886 DEBUG main org.springframework.orm.hibernate3.HibernateTemplate - Eagerly flushing Hibernate session
-2015-03-15 20:51:04,886 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
-2015-03-15 20:51:04,886 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
-2015-03-15 20:51:04,886 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
-2015-03-15 20:51:04,886 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-2015-03-15 20:51:04,886 DEBUG main org.hibernate.pretty.Printer - listing entities:
-2015-03-15 20:51:04,886 DEBUG main org.hibernate.pretty.Printer - model.EvenementCategorie{evenementB=model.Evenement#1, categorieA=model.Categorie#1, prix=123, numEvenementCategorie=1}
-2015-03-15 20:51:04,886 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
-2015-03-15 20:51:04,886 DEBUG main org.hibernate.SQL - insert into EVENEMENTCATEGORIE (Prix, NumCategorie, NumEvenement, NumEvenementCategorie) values (?, ?, ?, ?)
-2015-03-15 20:51:04,887 DEBUG main org.hibernate.jdbc.AbstractBatcher - Executing batch size: 1
-2015-03-15 20:51:04,939 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
-2015-03-15 20:51:04,940 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Closing Hibernate Session
-2015-03-15 20:51:04,940 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
-2015-03-15 20:51:04,941 DEBUG main org.hibernate.jdbc.ConnectionManager - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
-2015-03-15 20:51:04,941 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'clientService'
-2015-03-15 20:51:04,941 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Opening Hibernate Session
-2015-03-15 20:51:04,941 DEBUG main org.hibernate.impl.SessionImpl - opened session at timestamp: 14264490649
-2015-03-15 20:51:04,941 DEBUG main org.hibernate.id.IncrementGenerator - fetching initial value: select max(NUMCLIENT) from CLIENT
-2015-03-15 20:51:04,941 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
-2015-03-15 20:51:04,941 DEBUG main org.hibernate.jdbc.ConnectionManager - opening JDBC connection
-2015-03-15 20:51:04,941 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:mysql://localHost/Etick]
-2015-03-15 20:51:04,954 DEBUG main org.hibernate.SQL - select max(NUMCLIENT) from CLIENT
-2015-03-15 20:51:04,956 DEBUG main org.hibernate.id.IncrementGenerator - first free id: 1
-2015-03-15 20:51:04,956 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
-2015-03-15 20:51:04,956 DEBUG main org.hibernate.event.def.AbstractSaveEventListener - generated identifier: 1, using strategy: org.hibernate.id.IncrementGenerator
-2015-03-15 20:51:04,956 DEBUG main org.springframework.orm.hibernate3.HibernateTemplate - Eagerly flushing Hibernate session
-2015-03-15 20:51:04,956 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
-2015-03-15 20:51:04,956 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
-2015-03-15 20:51:04,957 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
-2015-03-15 20:51:04,957 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-2015-03-15 20:51:04,957 DEBUG main org.hibernate.pretty.Printer - listing entities:
-2015-03-15 20:51:04,957 DEBUG main org.hibernate.pretty.Printer - model.Client{adresseClient=null, prenomClient=null, nomClient=Client, numClient=1, passClient=null, telClient=null, loginClient=null}
-2015-03-15 20:51:04,957 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
-2015-03-15 20:51:04,957 DEBUG main org.hibernate.SQL - insert into CLIENT (NOMCLIENT, PRENOMCLIENT, ADRESSECLIENT, TELCLIENT, LOGINCLIENT, PASSCLIENT, NUMCLIENT) values (?, ?, ?, ?, ?, ?, ?)
-2015-03-15 20:51:04,958 DEBUG main org.hibernate.jdbc.AbstractBatcher - Executing batch size: 1
-2015-03-15 20:51:05,017 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
-2015-03-15 20:51:05,017 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Closing Hibernate Session
-2015-03-15 20:51:05,017 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
-2015-03-15 20:51:05,017 DEBUG main org.hibernate.jdbc.ConnectionManager - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
-2015-03-15 20:51:05,017 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'dateService'
-2015-03-15 20:51:05,018 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Opening Hibernate Session
-2015-03-15 20:51:05,018 DEBUG main org.hibernate.impl.SessionImpl - opened session at timestamp: 14264490650
-2015-03-15 20:51:05,018 DEBUG main org.hibernate.id.IncrementGenerator - fetching initial value: select max(NUMDATE) from DATE_E
-2015-03-15 20:51:05,018 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
-2015-03-15 20:51:05,018 DEBUG main org.hibernate.jdbc.ConnectionManager - opening JDBC connection
-2015-03-15 20:51:05,018 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:mysql://localHost/Etick]
-2015-03-15 20:51:05,030 DEBUG main org.hibernate.SQL - select max(NUMDATE) from DATE_E
-2015-03-15 20:51:05,031 DEBUG main org.hibernate.id.IncrementGenerator - first free id: 1
-2015-03-15 20:51:05,031 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
-2015-03-15 20:51:05,031 DEBUG main org.hibernate.event.def.AbstractSaveEventListener - generated identifier: 1, using strategy: org.hibernate.id.IncrementGenerator
-2015-03-15 20:51:05,041 DEBUG main org.springframework.orm.hibernate3.HibernateTemplate - Eagerly flushing Hibernate session
-2015-03-15 20:51:05,041 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
-2015-03-15 20:51:05,041 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
-2015-03-15 20:51:05,044 DEBUG main org.hibernate.engine.Collections - Collection found: [model.Date_E.evenement#1], was: [<unreferenced>] (initialized)
-2015-03-15 20:51:05,047 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
-2015-03-15 20:51:05,047 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 1 (re)creations, 0 updates, 0 removals to 1 collections
-2015-03-15 20:51:05,047 DEBUG main org.hibernate.pretty.Printer - listing entities:
-2015-03-15 20:51:05,055 DEBUG main org.hibernate.pretty.Printer - model.Date_E{numDate=1, dateFin=null, evenement=[], dateDebut=3905-02-15 00:00:00}
-2015-03-15 20:51:05,055 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
-2015-03-15 20:51:05,055 DEBUG main org.hibernate.SQL - insert into DATE_E (DATEDEBUT, DATEFIN, NUMDATE) values (?, ?, ?)
-2015-03-15 20:51:05,063 DEBUG main org.hibernate.jdbc.AbstractBatcher - Executing batch size: 1
-2015-03-15 20:51:05,117 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
-2015-03-15 20:51:05,117 DEBUG main org.hibernate.persister.collection.AbstractCollectionPersister - Inserting collection: [model.Date_E.evenement#1]
-2015-03-15 20:51:05,117 DEBUG main org.hibernate.persister.collection.AbstractCollectionPersister - collection was empty
-2015-03-15 20:51:05,118 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Closing Hibernate Session
-2015-03-15 20:51:05,118 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
-2015-03-15 20:51:05,119 DEBUG main org.hibernate.jdbc.ConnectionManager - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
-2015-03-15 20:51:05,119 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'commandeService'
-2015-03-15 20:51:05,119 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Opening Hibernate Session
-2015-03-15 20:51:05,119 DEBUG main org.hibernate.impl.SessionImpl - opened session at timestamp: 14264490651
-2015-03-15 20:51:05,119 DEBUG main org.hibernate.id.IncrementGenerator - fetching initial value: select max(NUMCOMMANDE) from COMMANDE
-2015-03-15 20:51:05,119 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
-2015-03-15 20:51:05,119 DEBUG main org.hibernate.jdbc.ConnectionManager - opening JDBC connection
-2015-03-15 20:51:05,119 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:mysql://localHost/Etick]
-2015-03-15 20:51:05,129 DEBUG main org.hibernate.SQL - select max(NUMCOMMANDE) from COMMANDE
-2015-03-15 20:51:05,131 DEBUG main org.hibernate.id.IncrementGenerator - first free id: 1
-2015-03-15 20:51:05,131 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
-2015-03-15 20:51:05,131 DEBUG main org.hibernate.event.def.AbstractSaveEventListener - generated identifier: 1, using strategy: org.hibernate.id.IncrementGenerator
-2015-03-15 20:51:05,131 DEBUG main org.springframework.orm.hibernate3.HibernateTemplate - Eagerly flushing Hibernate session
-2015-03-15 20:51:05,131 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
-2015-03-15 20:51:05,131 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
-2015-03-15 20:51:05,131 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
-2015-03-15 20:51:05,131 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-2015-03-15 20:51:05,131 DEBUG main org.hibernate.pretty.Printer - listing entities:
-2015-03-15 20:51:05,132 DEBUG main org.hibernate.pretty.Printer - model.Commande{numCommande=1, dateCommande=3905-02-15 00:00:00}
-2015-03-15 20:51:05,132 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
-2015-03-15 20:51:05,132 DEBUG main org.hibernate.SQL - insert into COMMANDE (DATECOMMANDE, NUMCOMMANDE) values (?, ?)
-2015-03-15 20:51:05,132 DEBUG main org.hibernate.jdbc.AbstractBatcher - Executing batch size: 1
-2015-03-15 20:51:05,183 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
-2015-03-15 20:51:05,183 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Closing Hibernate Session
-2015-03-15 20:51:05,183 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
-2015-03-15 20:51:05,183 DEBUG main org.hibernate.jdbc.ConnectionManager - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
-2015-03-15 20:51:05,184 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'panierService'
-2015-03-15 20:51:05,184 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Opening Hibernate Session
-2015-03-15 20:51:05,184 DEBUG main org.hibernate.impl.SessionImpl - opened session at timestamp: 14264490651
-2015-03-15 20:51:05,184 DEBUG main org.hibernate.id.IncrementGenerator - fetching initial value: select max(NUMPANIER) from PANIER
-2015-03-15 20:51:05,184 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
-2015-03-15 20:51:05,184 DEBUG main org.hibernate.jdbc.ConnectionManager - opening JDBC connection
-2015-03-15 20:51:05,184 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:mysql://localHost/Etick]
-2015-03-15 20:51:05,194 DEBUG main org.hibernate.SQL - select max(NUMPANIER) from PANIER
-2015-03-15 20:51:05,195 DEBUG main org.hibernate.id.IncrementGenerator - first free id: 1
-2015-03-15 20:51:05,196 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
-2015-03-15 20:51:05,196 DEBUG main org.hibernate.event.def.AbstractSaveEventListener - generated identifier: 1, using strategy: org.hibernate.id.IncrementGenerator
-2015-03-15 20:51:05,196 DEBUG main org.springframework.orm.hibernate3.HibernateTemplate - Eagerly flushing Hibernate session
-2015-03-15 20:51:05,196 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
-2015-03-15 20:51:05,196 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
-2015-03-15 20:51:05,196 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
-2015-03-15 20:51:05,196 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-2015-03-15 20:51:05,196 DEBUG main org.hibernate.pretty.Printer - listing entities:
-2015-03-15 20:51:05,196 DEBUG main org.hibernate.pretty.Printer - model.Panier{ligneCommande=null, numPanier=1}
-2015-03-15 20:51:05,196 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
-2015-03-15 20:51:05,197 DEBUG main org.hibernate.SQL - insert into PANIER (NUMPANIER) values (?)
-2015-03-15 20:51:05,197 DEBUG main org.hibernate.jdbc.AbstractBatcher - Executing batch size: 1
-2015-03-15 20:51:05,250 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
-2015-03-15 20:51:05,251 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Closing Hibernate Session
-2015-03-15 20:51:05,251 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
-2015-03-15 20:51:05,251 DEBUG main org.hibernate.jdbc.ConnectionManager - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
-2015-03-15 20:51:05,251 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'ligneCommandeService'
-2015-03-15 20:51:05,251 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Opening Hibernate Session
-2015-03-15 20:51:05,252 DEBUG main org.hibernate.impl.SessionImpl - opened session at timestamp: 14264490652
-2015-03-15 20:51:05,252 DEBUG main org.hibernate.id.IncrementGenerator - fetching initial value: select max(QTECOMMANDEE) from LIGNECOMMANDE
-2015-03-15 20:51:05,252 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
-2015-03-15 20:51:05,252 DEBUG main org.hibernate.jdbc.ConnectionManager - opening JDBC connection
-2015-03-15 20:51:05,252 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:mysql://localHost/Etick]
-2015-03-15 20:51:05,263 DEBUG main org.hibernate.SQL - select max(QTECOMMANDEE) from LIGNECOMMANDE
-2015-03-15 20:51:05,264 DEBUG main org.hibernate.id.IncrementGenerator - first free id: 1
-2015-03-15 20:51:05,264 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
-2015-03-15 20:51:05,264 DEBUG main org.hibernate.event.def.AbstractSaveEventListener - generated identifier: 1, using strategy: org.hibernate.id.IncrementGenerator
-2015-03-15 20:51:05,265 DEBUG main org.springframework.orm.hibernate3.HibernateTemplate - Eagerly flushing Hibernate session
-2015-03-15 20:51:05,265 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
-2015-03-15 20:51:05,265 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
-2015-03-15 20:51:05,265 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
-2015-03-15 20:51:05,265 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-2015-03-15 20:51:05,265 DEBUG main org.hibernate.pretty.Printer - listing entities:
-2015-03-15 20:51:05,265 DEBUG main org.hibernate.pretty.Printer - model.LigneCommande{qteCommandee=1, evenement=null, panier=null}
-2015-03-15 20:51:05,265 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
-2015-03-15 20:51:05,265 DEBUG main org.hibernate.SQL - insert into LIGNECOMMANDE (NUM_EVENEMENT, QTECOMMANDEE) values (?, ?)
-2015-03-15 20:51:05,266 DEBUG main org.hibernate.jdbc.AbstractBatcher - Executing batch size: 1
-2015-03-15 20:51:05,316 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
-2015-03-15 20:51:05,317 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Closing Hibernate Session
-2015-03-15 20:51:05,317 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
-2015-03-15 20:51:05,317 DEBUG main org.hibernate.jdbc.ConnectionManager - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
-2015-03-15 20:51:05,317 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'SeanceService'
-2015-03-15 20:51:05,317 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Opening Hibernate Session
-2015-03-15 20:51:05,317 DEBUG main org.hibernate.impl.SessionImpl - opened session at timestamp: 14264490653
-2015-03-15 20:51:05,317 DEBUG main org.hibernate.id.IncrementGenerator - fetching initial value: select max(NUMSEANCE) from SEANCE
-2015-03-15 20:51:05,317 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
-2015-03-15 20:51:05,317 DEBUG main org.hibernate.jdbc.ConnectionManager - opening JDBC connection
-2015-03-15 20:51:05,317 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:mysql://localHost/Etick]
-2015-03-15 20:51:05,329 DEBUG main org.hibernate.SQL - select max(NUMSEANCE) from SEANCE
-2015-03-15 20:51:05,340 DEBUG main org.hibernate.id.IncrementGenerator - first free id: 1
-2015-03-15 20:51:05,341 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
-2015-03-15 20:51:05,341 DEBUG main org.hibernate.event.def.AbstractSaveEventListener - generated identifier: 1, using strategy: org.hibernate.id.IncrementGenerator
-2015-03-15 20:51:05,341 DEBUG main org.springframework.orm.hibernate3.HibernateTemplate - Eagerly flushing Hibernate session
-2015-03-15 20:51:05,341 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
-2015-03-15 20:51:05,341 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
-2015-03-15 20:51:05,341 DEBUG main org.hibernate.engine.Collections - Collection found: [model.Seance.date#1], was: [<unreferenced>] (initialized)
-2015-03-15 20:51:05,342 DEBUG main org.hibernate.engine.Collections - Found collection with unloaded owner: [<unreferenced>]
-2015-03-15 20:51:05,342 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
-2015-03-15 20:51:05,342 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 1 (re)creations, 0 updates, 0 removals to 2 collections
-2015-03-15 20:51:05,342 DEBUG main org.hibernate.pretty.Printer - listing entities:
-2015-03-15 20:51:05,342 DEBUG main org.hibernate.pretty.Printer - model.Seance{heureFin=null, numSeance=1, heureDebut=null, date=[]}
-2015-03-15 20:51:05,342 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
-2015-03-15 20:51:05,342 DEBUG main org.hibernate.SQL - insert into SEANCE (HEUREDEBUT, HEUREFIN, NUMSEANCE) values (?, ?, ?)
-2015-03-15 20:51:05,342 DEBUG main org.hibernate.jdbc.AbstractBatcher - Executing batch size: 1
-2015-03-15 20:51:05,373 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
-2015-03-15 20:51:05,373 DEBUG main org.hibernate.persister.collection.AbstractCollectionPersister - Inserting collection: [model.Seance.date#1]
-2015-03-15 20:51:05,373 DEBUG main org.hibernate.persister.collection.AbstractCollectionPersister - collection was empty
-2015-03-15 20:51:05,373 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Closing Hibernate Session
-2015-03-15 20:51:05,373 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
-2015-03-15 20:51:05,373 DEBUG main org.hibernate.jdbc.ConnectionManager - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+2015-03-16 14:35:00,581 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 1 (re)creations, 0 updates, 0 removals to 1 collections
+2015-03-16 14:35:00,581 DEBUG main org.hibernate.pretty.Printer - listing entities:
+2015-03-16 14:35:00,597 DEBUG main org.hibernate.pretty.Printer - model.Date_E{numDate=1, dateFin=null, evenement=[], dateDebut=3905-02-15 00:00:00}
+2015-03-16 14:35:00,597 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2015-03-16 14:35:00,597 DEBUG main org.hibernate.SQL - insert into DATE_E (DATEDEBUT, DATEFIN, NUMDATE) values (?, ?, ?)
+2015-03-16 14:35:00,613 DEBUG main org.hibernate.jdbc.AbstractBatcher - Executing batch size: 1
+2015-03-16 14:35:00,660 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2015-03-16 14:35:00,660 DEBUG main org.hibernate.persister.collection.AbstractCollectionPersister - Inserting collection: [model.Date_E.evenement#1]
+2015-03-16 14:35:00,660 DEBUG main org.hibernate.persister.collection.AbstractCollectionPersister - collection was empty
+2015-03-16 14:35:00,660 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Closing Hibernate Session
+2015-03-16 14:35:00,660 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+2015-03-16 14:35:00,660 DEBUG main org.hibernate.jdbc.ConnectionManager - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+2015-03-16 14:35:00,660 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'commandeService'
+2015-03-16 14:35:00,660 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Opening Hibernate Session
+2015-03-16 14:35:00,660 DEBUG main org.hibernate.impl.SessionImpl - opened session at timestamp: 14265129006
+2015-03-16 14:35:00,660 DEBUG main org.hibernate.id.IncrementGenerator - fetching initial value: select max(NUMCOMMANDE) from COMMANDE
+2015-03-16 14:35:00,660 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2015-03-16 14:35:00,660 DEBUG main org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+2015-03-16 14:35:00,660 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:mysql://localHost/Etick]
+2015-03-16 14:35:00,675 DEBUG main org.hibernate.SQL - select max(NUMCOMMANDE) from COMMANDE
+2015-03-16 14:35:00,675 DEBUG main org.hibernate.id.IncrementGenerator - first free id: 2
+2015-03-16 14:35:00,675 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2015-03-16 14:35:00,675 DEBUG main org.hibernate.event.def.AbstractSaveEventListener - generated identifier: 2, using strategy: org.hibernate.id.IncrementGenerator
+2015-03-16 14:35:00,675 DEBUG main org.springframework.orm.hibernate3.HibernateTemplate - Eagerly flushing Hibernate session
+2015-03-16 14:35:00,675 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
+2015-03-16 14:35:00,675 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
+2015-03-16 14:35:00,675 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+2015-03-16 14:35:00,675 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2015-03-16 14:35:00,675 DEBUG main org.hibernate.pretty.Printer - listing entities:
+2015-03-16 14:35:00,675 DEBUG main org.hibernate.pretty.Printer - model.Commande{numCommande=2, dateCommande=3905-02-15 00:00:00}
+2015-03-16 14:35:00,675 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2015-03-16 14:35:00,675 DEBUG main org.hibernate.SQL - insert into COMMANDE (DATECOMMANDE, NUMCOMMANDE) values (?, ?)
+2015-03-16 14:35:00,675 DEBUG main org.hibernate.jdbc.AbstractBatcher - Executing batch size: 1
+2015-03-16 14:35:00,785 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2015-03-16 14:35:00,785 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Closing Hibernate Session
+2015-03-16 14:35:00,785 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+2015-03-16 14:35:00,785 DEBUG main org.hibernate.jdbc.ConnectionManager - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+2015-03-16 14:35:00,785 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'panierService'
+2015-03-16 14:35:00,785 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Opening Hibernate Session
+2015-03-16 14:35:00,785 DEBUG main org.hibernate.impl.SessionImpl - opened session at timestamp: 14265129007
+2015-03-16 14:35:00,785 DEBUG main org.hibernate.id.IncrementGenerator - fetching initial value: select max(NUMPANIER) from PANIER
+2015-03-16 14:35:00,785 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2015-03-16 14:35:00,785 DEBUG main org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+2015-03-16 14:35:00,785 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:mysql://localHost/Etick]
+2015-03-16 14:35:00,816 DEBUG main org.hibernate.SQL - select max(NUMPANIER) from PANIER
+2015-03-16 14:35:00,816 DEBUG main org.hibernate.id.IncrementGenerator - first free id: 1
+2015-03-16 14:35:00,816 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2015-03-16 14:35:00,816 DEBUG main org.hibernate.event.def.AbstractSaveEventListener - generated identifier: 1, using strategy: org.hibernate.id.IncrementGenerator
+2015-03-16 14:35:00,816 DEBUG main org.springframework.orm.hibernate3.HibernateTemplate - Eagerly flushing Hibernate session
+2015-03-16 14:35:00,816 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
+2015-03-16 14:35:00,816 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
+2015-03-16 14:35:00,816 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+2015-03-16 14:35:00,816 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2015-03-16 14:35:00,816 DEBUG main org.hibernate.pretty.Printer - listing entities:
+2015-03-16 14:35:00,816 DEBUG main org.hibernate.pretty.Printer - model.Panier{ligneCommande=null, numPanier=1}
+2015-03-16 14:35:00,816 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2015-03-16 14:35:00,816 DEBUG main org.hibernate.SQL - insert into PANIER (NUMPANIER) values (?)
+2015-03-16 14:35:00,816 DEBUG main org.hibernate.jdbc.AbstractBatcher - Executing batch size: 1
+2015-03-16 14:35:00,863 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2015-03-16 14:35:00,863 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Closing Hibernate Session
+2015-03-16 14:35:00,878 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+2015-03-16 14:35:00,878 DEBUG main org.hibernate.jdbc.ConnectionManager - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+2015-03-16 14:35:00,878 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'ligneCommandeService'
+2015-03-16 14:35:00,878 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Opening Hibernate Session
+2015-03-16 14:35:00,878 DEBUG main org.hibernate.impl.SessionImpl - opened session at timestamp: 14265129008
+2015-03-16 14:35:00,878 DEBUG main org.hibernate.id.IncrementGenerator - fetching initial value: select max(QTECOMMANDEE) from LIGNECOMMANDE
+2015-03-16 14:35:00,878 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2015-03-16 14:35:00,878 DEBUG main org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+2015-03-16 14:35:00,878 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:mysql://localHost/Etick]
+2015-03-16 14:35:00,910 DEBUG main org.hibernate.SQL - select max(QTECOMMANDEE) from LIGNECOMMANDE
+2015-03-16 14:35:00,910 DEBUG main org.hibernate.id.IncrementGenerator - first free id: 1
+2015-03-16 14:35:00,910 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2015-03-16 14:35:00,910 DEBUG main org.hibernate.event.def.AbstractSaveEventListener - generated identifier: 1, using strategy: org.hibernate.id.IncrementGenerator
+2015-03-16 14:35:00,910 DEBUG main org.springframework.orm.hibernate3.HibernateTemplate - Eagerly flushing Hibernate session
+2015-03-16 14:35:00,910 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
+2015-03-16 14:35:00,910 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
+2015-03-16 14:35:00,910 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+2015-03-16 14:35:00,910 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2015-03-16 14:35:00,910 DEBUG main org.hibernate.pretty.Printer - listing entities:
+2015-03-16 14:35:00,910 DEBUG main org.hibernate.pretty.Printer - model.LigneCommande{qteCommandee=1, evenement=null, panier=null}
+2015-03-16 14:35:00,910 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2015-03-16 14:35:00,910 DEBUG main org.hibernate.SQL - insert into LIGNECOMMANDE (NUM_EVENEMENT, QTECOMMANDEE) values (?, ?)
+2015-03-16 14:35:00,910 DEBUG main org.hibernate.jdbc.AbstractBatcher - Executing batch size: 1
+2015-03-16 14:35:00,988 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2015-03-16 14:35:00,988 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Closing Hibernate Session
+2015-03-16 14:35:00,988 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+2015-03-16 14:35:00,988 DEBUG main org.hibernate.jdbc.ConnectionManager - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+2015-03-16 14:35:00,988 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'SeanceService'
+2015-03-16 14:35:00,988 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Opening Hibernate Session
+2015-03-16 14:35:00,988 DEBUG main org.hibernate.impl.SessionImpl - opened session at timestamp: 14265129009
+2015-03-16 14:35:00,988 DEBUG main org.hibernate.id.IncrementGenerator - fetching initial value: select max(NUMSEANCE) from SEANCE
+2015-03-16 14:35:00,988 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2015-03-16 14:35:00,988 DEBUG main org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+2015-03-16 14:35:00,988 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:mysql://localHost/Etick]
+2015-03-16 14:35:01,003 DEBUG main org.hibernate.SQL - select max(NUMSEANCE) from SEANCE
+2015-03-16 14:35:01,003 DEBUG main org.hibernate.id.IncrementGenerator - first free id: 1
+2015-03-16 14:35:01,003 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2015-03-16 14:35:01,003 DEBUG main org.hibernate.event.def.AbstractSaveEventListener - generated identifier: 1, using strategy: org.hibernate.id.IncrementGenerator
+2015-03-16 14:35:01,003 DEBUG main org.springframework.orm.hibernate3.HibernateTemplate - Eagerly flushing Hibernate session
+2015-03-16 14:35:01,003 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
+2015-03-16 14:35:01,003 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
+2015-03-16 14:35:01,003 DEBUG main org.hibernate.engine.Collections - Collection found: [model.Seance.date#1], was: [<unreferenced>] (initialized)
+2015-03-16 14:35:01,003 DEBUG main org.hibernate.engine.Collections - Found collection with unloaded owner: [<unreferenced>]
+2015-03-16 14:35:01,003 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+2015-03-16 14:35:01,003 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 1 (re)creations, 0 updates, 0 removals to 2 collections
+2015-03-16 14:35:01,003 DEBUG main org.hibernate.pretty.Printer - listing entities:
+2015-03-16 14:35:01,003 DEBUG main org.hibernate.pretty.Printer - model.Seance{heureFin=null, numSeance=1, heureDebut=null, date=[]}
+2015-03-16 14:35:01,003 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2015-03-16 14:35:01,003 DEBUG main org.hibernate.SQL - insert into SEANCE (HEUREDEBUT, HEUREFIN, NUMSEANCE) values (?, ?, ?)
+2015-03-16 14:35:01,003 DEBUG main org.hibernate.jdbc.AbstractBatcher - Executing batch size: 1
+2015-03-16 14:35:01,050 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2015-03-16 14:35:01,050 DEBUG main org.hibernate.persister.collection.AbstractCollectionPersister - Inserting collection: [model.Seance.date#1]
+2015-03-16 14:35:01,050 DEBUG main org.hibernate.persister.collection.AbstractCollectionPersister - collection was empty
+2015-03-16 14:35:01,050 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Closing Hibernate Session
+2015-03-16 14:35:01,050 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+2015-03-16 14:35:01,050 DEBUG main org.hibernate.jdbc.ConnectionManager - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+2015-03-16 14:35:01,050 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'FactureService'
+2015-03-16 14:35:01,050 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Opening Hibernate Session
+2015-03-16 14:35:01,050 DEBUG main org.hibernate.impl.SessionImpl - opened session at timestamp: 14265129010
+2015-03-16 14:35:01,050 DEBUG main org.hibernate.id.IncrementGenerator - fetching initial value: select max(NUMFACTURE) from FACTURE
+2015-03-16 14:35:01,050 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2015-03-16 14:35:01,050 DEBUG main org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+2015-03-16 14:35:01,050 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:mysql://localHost/Etick]
+2015-03-16 14:35:01,066 DEBUG main org.hibernate.SQL - select max(NUMFACTURE) from FACTURE
+2015-03-16 14:35:01,066 DEBUG main org.hibernate.id.IncrementGenerator - first free id: 1
+2015-03-16 14:35:01,066 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2015-03-16 14:35:01,066 DEBUG main org.hibernate.event.def.AbstractSaveEventListener - generated identifier: 1, using strategy: org.hibernate.id.IncrementGenerator
+2015-03-16 14:35:01,066 DEBUG main org.springframework.orm.hibernate3.HibernateTemplate - Eagerly flushing Hibernate session
+2015-03-16 14:35:01,066 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
+2015-03-16 14:35:01,066 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
+2015-03-16 14:35:01,066 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+2015-03-16 14:35:01,066 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2015-03-16 14:35:01,066 DEBUG main org.hibernate.pretty.Printer - listing entities:
+2015-03-16 14:35:01,066 DEBUG main org.hibernate.pretty.Printer - model.Facture{dateFacture=null, cmd=null, datePaiement=null, numFacture=1, montantFacture=0}
+2015-03-16 14:35:01,066 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2015-03-16 14:35:01,066 DEBUG main org.hibernate.SQL - insert into FACTURE (DATEFACTURE, DATEPAIEMENT, MONTANTFACTURE, NUM_CMD, NUMFACTURE) values (?, ?, ?, ?, ?)
+2015-03-16 14:35:01,066 DEBUG main org.hibernate.jdbc.AbstractBatcher - Executing batch size: 1
+2015-03-16 14:35:01,113 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2015-03-16 14:35:01,113 DEBUG main org.springframework.orm.hibernate3.SessionFactoryUtils - Closing Hibernate Session
+2015-03-16 14:35:01,113 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+2015-03-16 14:35:01,113 DEBUG main org.hibernate.jdbc.ConnectionManager - transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!

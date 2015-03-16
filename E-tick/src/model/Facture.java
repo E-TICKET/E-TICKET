@@ -9,12 +9,35 @@ import java.util.*;
 
 public class Facture {
  
-   public String numFacture;
+   public int numFacture;
 
-   public Date_E dateFacture;
+   public Date dateFacture;
 
-   public Date_E datePaiement;
+   public Date datePaiement;
 
    public int montantFacture;
+   
+   public Commande cmd;
+
+
+public void setNumFacture(int numFacture) {
+	this.numFacture = numFacture;
+}
+
+public void setDateFacture(Date dateFacture) {
+	this.dateFacture = dateFacture;
+}
+
+public void setDatePaiement(Date datePaiement) {
+	this.datePaiement = datePaiement;
+}
+
+public void setMontantFacture(int montantFacture) {
+	this.montantFacture = montantFacture;
+}
+
+public void setCmd(Commande cmd) {
+	this.cmd = cmd;
+}
 
 }

@@ -37,6 +37,7 @@
 				<value>/Panier.hbm.xml</value>
 				<value>/LigneCommande.hbm.xml</value>
 				<value>/Seance.hbm.xml</value>
+				<value>/Facture.hbm.xml</value>
 			</list>
 		</property>
 	</bean>
@@ -119,6 +120,15 @@
 
 	<!-- Data Access Object -->
 	<bean id="SeanceDao" class="dao.DAOSeance">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+    <bean id="FactureService" class="service.ServiceFacture">
+		<property name="FactureDao" ref="FactureDao" />
+	</bean>
+
+	<!-- Data Access Object -->
+	<bean id="FactureDao" class="dao.DAOFacture">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 

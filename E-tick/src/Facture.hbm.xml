@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 16 mars 2015 14:26:01 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="model.Facture" table="FACTURE">
+        <id name="numFacture" type="int" access="field">
+            <column name="NUMFACTURE" />
+            <generator class="increment" />
+        </id>
+        <property name="dateFacture" type="java.util.Date" access="field">
+            <column name="DATEFACTURE" />
+        </property>
+        <property name="datePaiement" type="java.util.Date" access="field">
+            <column name="DATEPAIEMENT" />
+        </property>
+        <property name="montantFacture" type="int" access="field">
+            <column name="MONTANTFACTURE" />
+        </property>
+        <many-to-one name="cmd" class="model.Commande" access="field" fetch="join">
+            <column name="NUM_CMD" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

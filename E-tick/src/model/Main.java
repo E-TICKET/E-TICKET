@@ -111,7 +111,9 @@ sauve(c);
 		Seance S = new Seance();
 		SeanceService.create(S);
 		
-
+		IServiceObject FactureService=(IServiceObject)context.getBean("FactureService");
+		Facture F = new Facture();
+		FactureService.create(F);
 
 	}
 
