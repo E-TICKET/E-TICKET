@@ -40,6 +40,7 @@
 				<value>/Facture.hbm.xml</value>
 				<value>/TypeEvenement.hbm.xml</value>
 				<value>/Lieu.hbm.xml</value>
+				<value>/GenreEvenement.hbm.xml</value>
 			</list>
 		</property>
 	</bean>
@@ -148,6 +149,16 @@
 
 	<!-- Data Access Object -->
 	<bean id="lieuDao" class="dao.DAOLieu">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	
+	<bean id="genreEvenement" class="service.ServiceGenreEvenement">
+		<property name="daogenreevenement" ref="genreevenementdao" />
+	</bean>
+
+	<!-- Data Access Object -->
+	<bean id="genreevenementdao" class="dao.DAOGenreEvenement">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 

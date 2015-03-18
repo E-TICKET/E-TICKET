@@ -20,7 +20,27 @@ public class GenreEvenement {
    
    
 
-   public Collection<Evenement> getEvenement() {
+   public int getNumGenreEvenement() {
+	return numGenreEvenement;
+}
+
+
+public void setNumGenreEvenement(int numGenreEvenement) {
+	this.numGenreEvenement = numGenreEvenement;
+}
+
+
+public String getNomGenreEvenement() {
+	return nomGenreEvenement;
+}
+
+
+public void setNomGenreEvenement(String nomGenreEvenement) {
+	this.nomGenreEvenement = nomGenreEvenement;
+}
+
+
+public Collection<Evenement> getEvenement() {
       if (evenement == null)
          evenement = new HashSet<Evenement>();
       return evenement;

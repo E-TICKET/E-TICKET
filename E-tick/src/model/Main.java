@@ -120,7 +120,13 @@ IServiceObject Lieu =(IServiceObject)context.getBean("lieuService");
 		
 				Lieu.create(Li);
 				
-				System.out.println("Test");
+				
+				
+				IServiceObject GenreEvenement =(IServiceObject)context.getBean("genreEvenement");
+                    GenreEvenement ge = new GenreEvenement();
+						
+                    GenreEvenement.create(ge);
+				
 		
 	}
 
