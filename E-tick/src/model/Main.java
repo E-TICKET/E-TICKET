@@ -119,6 +119,8 @@ IServiceObject Lieu =(IServiceObject)context.getBean("lieuService");
 		Lieu Li = new Lieu();
 		
 				Lieu.create(Li);
+				
+				System.out.println("Test");
 		
 	}
 
