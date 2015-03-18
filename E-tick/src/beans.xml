@@ -9,7 +9,7 @@
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://localHost/Etick" />
 		<property name="username" value="root" />
-		<property name="password" value="root" />
+		<property name="password" value="aroot" />
 	</bean>
 
 	<!-- session factory -->
@@ -39,6 +39,7 @@
 				<value>/Seance.hbm.xml</value>
 				<value>/Facture.hbm.xml</value>
 				<value>/TypeEvenement.hbm.xml</value>
+				<value>/Lieu.hbm.xml</value>
 			</list>
 		</property>
 	</bean>
@@ -71,7 +72,7 @@
 	</bean>
 
 	<bean id="clientService" class="service.ServiceClient">
-		<property name="ClientDao" ref="clientDao" />
+		<property name="clientDao" ref="clientDao" />
 	</bean>
 
 	<!-- Data Access Object -->
@@ -89,25 +90,25 @@
 	</bean>
 	
 	<bean id="dateService" class="service.ServiceDate">
-		<property name="dateDao" ref="DateDao" />
+		<property name="dateDao" ref="dateDao" />
 	</bean>
 
 	<!-- Data Access Object -->
-	<bean id="DateDao" class="dao.DAODate">
+	<bean id="dateDao" class="dao.DAODate">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 	
 	<bean id="panierService" class="service.ServicePanier">
-		<property name="PanierDao" ref="PanierDao" />
+		<property name="panierDao" ref="panierDao" />
 	</bean>
 
 	<!-- Data Access Object -->
-	<bean id="PanierDao" class="dao.DAOPanier">
+	<bean id="panierDao" class="dao.DAOPanier">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 	
 	<bean id="ligneCommandeService" class="service.ServiceLigneCommande">
-		<property name="LigneCommandeDao" ref="ligneCommandeDao" />
+		<property name="ligneCommandeDao" ref="ligneCommandeDao" />
 	</bean>
 
 	<!-- Data Access Object -->
@@ -115,30 +116,38 @@
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 	
-	<bean id="SeanceService" class="service.ServiceSeance">
-		<property name="seanceDao" ref="SeanceDao" />
+	<bean id="seanceService" class="service.ServiceSeance">
+		<property name="seanceDao" ref="seanceDao" />
 	</bean>
 
 	<!-- Data Access Object -->
-	<bean id="SeanceDao" class="dao.DAOSeance">
+	<bean id="seanceDao" class="dao.DAOSeance">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 
-    <bean id="FactureService" class="service.ServiceFacture">
-		<property name="FactureDao" ref="FactureDao" />
+    <bean id="factureService" class="service.ServiceFacture">
+		<property name="factureDao" ref="factureDao" />
 	</bean>
 
 	<!-- Data Access Object -->
-	<bean id="FactureDao" class="dao.DAOFacture">
+	<bean id="factureDao" class="dao.DAOFacture">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 	
-	<bean id="TypeEvenementService" class="service.ServiceTypeEvenement">
-		<property name="typeEvenementDao" ref="TypeEvenementDao" />
+	<bean id="typeEvenementService" class="service.ServiceTypeEvenement">
+		<property name="typeEvenementDao" ref="typeEvenementDao" />
 	</bean>
 
 	<!-- Data Access Object -->
-	<bean id="TypeEvenementDao" class="dao.DAOTypeEvenement">
+	<bean id="typeEvenementDao" class="dao.DAOTypeEvenement">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="lieuService" class="service.ServiceLieu">
+		<property name="lieuDao" ref="lieuDao" />
+	</bean>
+
+	<!-- Data Access Object -->
+	<bean id="lieuDao" class="dao.DAOLieu">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 

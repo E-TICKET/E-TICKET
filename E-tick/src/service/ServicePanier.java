@@ -8,24 +8,32 @@ import model.Panier;
 
 
 public class ServicePanier implements IServiceObject<Panier>{
-IDAOObject PanierDao;
+IDAOObject panierDao;
 
 public IDAOObject getPanierDao() {
-	return PanierDao;
+	return panierDao;
 }
+
+
+
+
 
 
 
 public void setPanierDao(IDAOObject panierDao) {
-	PanierDao = panierDao;
+	this.panierDao = panierDao;
 }
+
+
+
+
 
 
 
 @Override
 public void create(Panier person) {
 	// TODO Auto-generated method stub
-	PanierDao.save(person);
+	panierDao.save(person);
 }
 
 
@@ -33,7 +41,7 @@ public void create(Panier person) {
 @Override
 public void delete(Panier person) {
 	// TODO Auto-generated method stub
-	PanierDao.delete(person);
+	panierDao.delete(person);
 }
 
 @Override
@@ -45,7 +53,7 @@ public void update(Panier person) {
 @Override
 public Panier searchPersonById(int id) {
 	// TODO Auto-generated method stub
-	return (Panier) PanierDao.findById(id);
+	return (Panier) panierDao.findById(id);
 }
 	
 

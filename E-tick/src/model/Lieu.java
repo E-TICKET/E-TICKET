@@ -11,7 +11,7 @@ import java.util.*;
 
 public class Lieu {
 
-   public String numLieu;
+   public int numLieu;
  
    public String nomLieu;
 
@@ -22,7 +22,47 @@ public class Lieu {
    public int capacite;
    
   
-   public Collection<Evenement> evenement;
+   public int getNumLieu() {
+	return numLieu;
+}
+
+public void setNumLieu(int numLieu) {
+	this.numLieu = numLieu;
+}
+
+public String getNomLieu() {
+	return nomLieu;
+}
+
+public void setNomLieu(String nomLieu) {
+	this.nomLieu = nomLieu;
+}
+
+public String getAdresse() {
+	return adresse;
+}
+
+public void setAdresse(String adresse) {
+	this.adresse = adresse;
+}
+
+public int getNbCategorie() {
+	return nbCategorie;
+}
+
+public void setNbCategorie(int nbCategorie) {
+	this.nbCategorie = nbCategorie;
+}
+
+public int getCapacite() {
+	return capacite;
+}
+
+public void setCapacite(int capacite) {
+	this.capacite = capacite;
+}
+
+public Collection<Evenement> evenement;
    
    
    /** @pdGenerated default getter */

@@ -8,10 +8,14 @@ import model.Facture;
 
 
 public class ServiceFacture implements IServiceObject<Facture>{
-IDAOObject FactureDao;
+IDAOObject factureDao;
+
+
+
+
 
 public void setFactureDao(IDAOObject factureDao) {
-	FactureDao = factureDao;
+	this.factureDao = factureDao;
 }
 
 
@@ -19,7 +23,7 @@ public void setFactureDao(IDAOObject factureDao) {
 @Override
 public void create(Facture person) {
 	// TODO Auto-generated method stub
-	FactureDao.save(person);
+	factureDao.save(person);
 }
 
 
@@ -27,7 +31,7 @@ public void create(Facture person) {
 @Override
 public void delete(Facture person) {
 	// TODO Auto-generated method stub
-	FactureDao.delete(person);
+	factureDao.delete(person);
 }
 
 @Override
@@ -39,7 +43,7 @@ public void update(Facture person) {
 @Override
 public Facture searchPersonById(int id) {
 	// TODO Auto-generated method stub
-	return (Facture) FactureDao.findById(id);
+	return (Facture) factureDao.findById(id);
 }
 	
 

@@ -103,19 +103,23 @@ sauve(c);
 		LigneCommande LC = new LigneCommande();
 		LigneCommandeService.create(LC);
 		
-		IServiceObject SeanceService=(IServiceObject)context.getBean("SeanceService");
+		IServiceObject SeanceService=(IServiceObject)context.getBean("seanceService");
 		Seance S = new Seance();
 		SeanceService.create(S);
 		
-		IServiceObject FactureService=(IServiceObject)context.getBean("FactureService");
+		IServiceObject FactureService=(IServiceObject)context.getBean("factureService");
 		Facture F = new Facture();
 		FactureService.create(F);
 		
-		IServiceObject TypeEvenementService=(IServiceObject)context.getBean("TypeEvenementService");
+		IServiceObject TypeEvenementService=(IServiceObject)context.getBean("typeEvenementService");
 		TypeEvenement TE = new TypeEvenement();
 		TypeEvenementService.create(TE);
 		
-
+IServiceObject Lieu =(IServiceObject)context.getBean("lieuService");
+		Lieu Li = new Lieu();
+		
+				Lieu.create(Li);
+		
 	}
 
 

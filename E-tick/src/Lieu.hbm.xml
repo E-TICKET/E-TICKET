@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 18 mars 2015 14:54:10 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="model.Lieu" table="LIEU">
+        <id name="numLieu" type="int">
+            <column name="NUMLIEU" />
+            <generator class="increment" />
+        </id>
+        <property name="nomLieu" type="java.lang.String">
+            <column name="NOMLIEU" />
+        </property>
+        <property name="adresse" type="java.lang.String">
+            <column name="ADRESSE" />
+        </property>
+        <property name="nbCategorie" type="int">
+            <column name="NBCATEGORIE" />
+        </property>
+        <property name="capacite" type="int">
+            <column name="CAPACITE" />
+        </property>
+        <bag name="evenement" table="EVENEMENT" inverse="false" lazy="true">
+            <key>
+                <column name="NUMLIEU" />
+            </key>
+            <one-to-many class="model.Evenement" />
+        </bag>
+    </class>
+</hibernate-mapping>

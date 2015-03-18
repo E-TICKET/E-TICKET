@@ -8,22 +8,30 @@ import model.Client;
 
 
 public class ServiceClient implements IServiceObject<Client>{
-IDAOObject ClientDao;
+IDAOObject clientDao;
+
+
+
+
+
+public void setClientDao(IDAOObject clientDao) {
+	this.clientDao = clientDao;
+}
+
+
 
 @Override
 public void create(Client person) {
 	// TODO Auto-generated method stub
-	ClientDao.save(person);
+	clientDao.save(person);
 }
 
-public void setClientDao(IDAOObject clientDao) {
-	ClientDao = clientDao;
-}
+
 
 @Override
 public void delete(Client person) {
 	// TODO Auto-generated method stub
-	ClientDao.delete(person);
+	clientDao.delete(person);
 }
 
 @Override
@@ -35,7 +43,7 @@ public void update(Client person) {
 @Override
 public Client searchPersonById(int id) {
 	// TODO Auto-generated method stub
-	return (Client) ClientDao.findById(id);
+	return (Client) clientDao.findById(id);
 }
 	
 

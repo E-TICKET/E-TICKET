@@ -8,22 +8,24 @@ import model.Panier;
 
 
 public class ServiceLigneCommande implements IServiceObject<LigneCommande>{
-IDAOObject LigneCommandeDao;
+IDAOObject ligneCommandeDao;
+
+
 
 public void setLigneCommandeDao(IDAOObject ligneCommandeDao) {
-	LigneCommandeDao = ligneCommandeDao;
+	this.ligneCommandeDao = ligneCommandeDao;
 }
 
 
 public IDAOObject getPanierDao() {
-	return LigneCommandeDao;
+	return ligneCommandeDao;
 }
 
 
 @Override
 public void create(LigneCommande person) {
 	// TODO Auto-generated method stub
-	LigneCommandeDao.save(person);
+	ligneCommandeDao.save(person);
 }
 
 
@@ -31,7 +33,7 @@ public void create(LigneCommande person) {
 @Override
 public void delete(LigneCommande person) {
 	// TODO Auto-generated method stub
-	LigneCommandeDao.delete(person);
+	ligneCommandeDao.delete(person);
 }
 
 @Override
@@ -43,7 +45,7 @@ public void update(LigneCommande person) {
 @Override
 public LigneCommande searchPersonById(int id) {
 	// TODO Auto-generated method stub
-	return (LigneCommande) LigneCommandeDao.findById(id);
+	return (LigneCommande) ligneCommandeDao.findById(id);
 }
 	
 
