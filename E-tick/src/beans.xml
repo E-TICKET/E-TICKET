@@ -38,6 +38,7 @@
 				<value>/LigneCommande.hbm.xml</value>
 				<value>/Seance.hbm.xml</value>
 				<value>/Facture.hbm.xml</value>
+				<value>/TypeEvenement.hbm.xml</value>
 			</list>
 		</property>
 	</bean>
@@ -129,6 +130,15 @@
 
 	<!-- Data Access Object -->
 	<bean id="FactureDao" class="dao.DAOFacture">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="TypeEvenementService" class="service.ServiceTypeEvenement">
+		<property name="typeEvenementDao" ref="TypeEvenementDao" />
+	</bean>
+
+	<!-- Data Access Object -->
+	<bean id="TypeEvenementDao" class="dao.DAOTypeEvenement">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 

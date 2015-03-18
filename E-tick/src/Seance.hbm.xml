@@ -14,11 +14,11 @@
         <property name="heureFin" type="java.sql.Time" access="field">
             <column name="HEUREFIN" />
         </property>
-        <bag name="date" table="DATE_E" inverse="false" lazy="true">
+        <bag name="date" table="DATE_Ev" inverse="false" lazy="true">
             <key>
                 <column name="NUMSEANCE" />
             </key>
-            <one-to-many class="model.Date_E" />
+            <one-to-many class="model.Date_Ev" />
         </bag>
     </class>
 </hibernate-mapping>

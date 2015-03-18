@@ -20,7 +20,7 @@ public class Evenement {
    
    public Collection<LigneCommande> ligneCommande;
    /** @pdRoleInfo migr=no name=Date assc=evenementDate coll=java.util.Collection impl=java.util.HashSet mult=1..* */
-   public Date_E date;
+   public Date_Ev date;
    public Collection<EvenementCategorie> evenementCategorie;
    
    
@@ -30,11 +30,11 @@ public class Evenement {
   
   
    
-   public Date_E getDate() {
+   public Date_Ev getDate() {
 	return date;
 }
 
-public void setDate(Date_E date) {
+public void setDate(Date_Ev date) {
 	this.date = date;
 }
 

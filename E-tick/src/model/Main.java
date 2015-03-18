@@ -2,10 +2,6 @@ package model;
 
 
 
-import java.util.Collection;
-
-
-
 import java.util.Date;
 
 import org.hibernate.HibernateException;
@@ -13,7 +9,6 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
 import service.IServiceObject;
 
 
@@ -86,14 +81,15 @@ sauve(c);
 
 
 		IServiceObject DateService=(IServiceObject)context.getBean("dateService");
-		Date_E D = new Date_E();
-
+		Date_Ev D= new Date_Ev();
+		
 		Date datedebut= new Date(2005,01,15);
+		
 		D.setDateDebut(datedebut);
 
 		DateService.create(D);
 
-
+		
 		IServiceObject CommandeService=(IServiceObject)context.getBean("commandeService");
 		Commande Co = new Commande();
 		Co.setDateCommande(datedebut);
@@ -114,6 +110,11 @@ sauve(c);
 		IServiceObject FactureService=(IServiceObject)context.getBean("FactureService");
 		Facture F = new Facture();
 		FactureService.create(F);
+		
+		IServiceObject TypeEvenementService=(IServiceObject)context.getBean("TypeEvenementService");
+		TypeEvenement TE = new TypeEvenement();
+		TypeEvenementService.create(TE);
+		
 
 	}
 

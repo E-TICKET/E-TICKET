@@ -2,12 +2,12 @@ package service;
 
 import dao.IDAOObject;
 
-import model.Date_E;
+import model.Date_Ev;
 
 
 
 
-public class ServiceDate implements IServiceObject<Date_E>{
+public class ServiceDate implements IServiceObject<Date_Ev>{
 IDAOObject dateDao;
 
 
@@ -17,27 +17,27 @@ public void setDateDao(IDAOObject dateDao) {
 }
 
 @Override
-public void create(Date_E person) {
+public void create(Date_Ev person) {
 	// TODO Auto-generated method stub
 	dateDao.save(person);
 }
 
 @Override
-public void delete(Date_E person) {
+public void delete(Date_Ev person) {
 	// TODO Auto-generated method stub
 	
 }
 
 @Override
-public void update(Date_E person) {
+public void update(Date_Ev person) {
 	// TODO Auto-generated method stub
 	
 }
 
 @Override
-public Date_E searchPersonById(int id) {
+public Date_Ev searchPersonById(int id) {
 	// TODO Auto-generated method stub
-	return (Date_E) dateDao.findById(id);
+	return (Date_Ev) dateDao.findById(id);
 }
 
 	

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 18 mars 2015 11:25:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="model.TypeEvenement" table="TYPEEVENEMENT">
+        <id name="numTypeEvenement" type="int" access="field">
+            <column name="NUMTYPEEVENEMENT" />
+            <generator class="increment" />
+        </id>
+        <property name="libelleTypeEvenementt" type="java.lang.String" access="field">
+            <column name="LIBELLETYPEEVENEMENTT" />
+        </property>
+        <property name="nbrType" type="int" access="field">
+            <column name="NBRTYPE" />
+        </property>
+     <!--    <bag name="genreEvenement" table="GENREEVENEMENT" inverse="false" lazy="true">
+            <key>
+                <column name="NUMTYPEEVENEMENT" />
+            </key>
+            <one-to-many class="model.GenreEvenement" />
+        </bag>--> 
+    </class>
+</hibernate-mapping>

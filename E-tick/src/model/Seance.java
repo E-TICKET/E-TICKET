@@ -31,38 +31,38 @@ public void setHeureFin(Time heureFin) {
 	this.heureFin = heureFin;
 }
 
-public Collection<Date_E> date;
+public Collection<Date_Ev> date;
    
    
 
-   public Collection<Date_E> getDate() {
+   public Collection<Date_Ev> getDate() {
       if (date == null)
-         date = new HashSet<Date_E>();
+         date = new HashSet<Date_Ev>();
       return date;
    }
    
    /** @pdGenerated default iterator getter */
    public Iterator getIteratorDate() {
       if (date == null)
-         date = new HashSet<Date_E>();
+         date = new HashSet<Date_Ev>();
       return date.iterator();
    }
    
    /** @pdGenerated default setter
      * @param newDate */
-   public void setDate(Collection<Date_E> newDate) {
+   public void setDate(Collection<Date_Ev> newDate) {
       removeAllDate();
       for (Iterator iter = newDate.iterator(); iter.hasNext();)
-         addDate((Date_E)iter.next());
+         addDate((Date_Ev)iter.next());
    }
    
    /** @pdGenerated default add
      * @param newDate */
-   public void addDate(Date_E newDate) {
+   public void addDate(Date_Ev newDate) {
       if (newDate == null)
          return;
       if (this.date == null)
-         this.date = new HashSet<Date_E>();
+         this.date = new HashSet<Date_Ev>();
       if (!this.date.contains(newDate))
       {
          this.date.add(newDate);
@@ -72,7 +72,7 @@ public Collection<Date_E> date;
    
    /** @pdGenerated default remove
      * @param oldDate */
-   public void removeDate(Date_E oldDate) {
+   public void removeDate(Date_Ev oldDate) {
       if (oldDate == null)
          return;
       if (this.date != null)
@@ -87,10 +87,10 @@ public Collection<Date_E> date;
    public void removeAllDate() {
       if (date != null)
       {
-         Date_E oldDate;
+    	  Date_Ev oldDate;
          for (Iterator iter = getIteratorDate(); iter.hasNext();)
          {
-            oldDate = (Date_E)iter.next();
+            oldDate = (Date_Ev)iter.next();
             iter.remove();
             oldDate.removeSeance(this);
          }

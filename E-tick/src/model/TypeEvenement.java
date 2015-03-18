@@ -6,16 +6,32 @@ package model;
  ***********************************************************************/
 
 import java.util.*;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+@Entity
 public class TypeEvenement {
 
-   public String numTypeEvenement;
+   public int numTypeEvenement;
 
    public String libelleTypeEvenementt;
 
    public int nbrType;
    
 
-   public Collection<GenreEvenement> genreEvenement;
+   public void setNumTypeEvenement(int numTypeEvenement) {
+	this.numTypeEvenement = numTypeEvenement;
+}
+
+public void setLibelleTypeEvenementt(String libelleTypeEvenementt) {
+	this.libelleTypeEvenementt = libelleTypeEvenementt;
+}
+
+public void setNbrType(int nbrType) {
+	this.nbrType = nbrType;
+}
+
+@OneToMany
+public Collection<GenreEvenement> genreEvenement;
    
    
    /** @pdGenerated default getter */
