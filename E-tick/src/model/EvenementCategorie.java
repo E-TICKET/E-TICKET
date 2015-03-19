@@ -18,6 +18,22 @@ public class EvenementCategorie {
 	public Categorie categorieA;
 	public Evenement evenementB;
 	
+	public int getPrix() {
+		return prix;
+	}
+
+	public int getNumEvenementCategorie() {
+		return numEvenementCategorie;
+	}
+
+	public Categorie getCategorieA() {
+		return categorieA;
+	}
+
+	public Evenement getEvenementB() {
+		return evenementB;
+	}
+
 	public void setNumEvenementCategorie(int numEvenementCategorie) {
 		this.numEvenementCategorie = numEvenementCategorie;
 	}

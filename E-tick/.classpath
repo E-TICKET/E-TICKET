@@ -4,6 +4,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Spring"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/BaseDonnéeDrive"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/SpringHib"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/SpringHub"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

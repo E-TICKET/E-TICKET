@@ -12,13 +12,12 @@
             <column name="Prix" />
         </property>
         
+       <many-to-one name="evenementB" class="model.Evenement" fetch="join">
+            <column name="EVENEMENTB" />
+        </many-to-one>
+        <many-to-one name="categorieA" class="model.Categorie" fetch="join">
+            <column name="CATEGORIEA" />
+        </many-to-one>
        
-        <many-to-one name="categorieA" class="model.Categorie" access="field" fetch="join">
-            <column name="NumCategorie" />
-        </many-to-one>
-        
-        <many-to-one name="evenementB" class="model.Evenement" access="field" fetch="join">
-            <column name="NumEvenement" />
-        </many-to-one>
     </class>
 </hibernate-mapping>

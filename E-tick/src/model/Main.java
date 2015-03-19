@@ -53,6 +53,10 @@ sauve(c);
 		c.setNbCategorie(4);
 		c.setNomCategorie("C");
 		categorieService.create(c);
+		Categorie c2 = new Categorie();
+		c.setNbCategorie(1);
+		c.setNomCategorie("A");
+		categorieService.create(c2);
 		 
 		// Evenement :
 
@@ -67,10 +71,12 @@ sauve(c);
 		IServiceObject evenementcategorieService=(IServiceObject)context.getBean("evenementcategorieService");
 		EvenementCategorie evc = new EvenementCategorie();
 		evc.setPrix(123);
-		e.setNumEvenement(1);
-		c.setNumCategorie(1);
+		
 		evc.setEvenementB(e);
 		evc.setCategorieA(c);
+		evenementcategorieService.create(evc);
+		evc.setCategorieA(c2);
+		evc.setEvenementB(e);
 		evenementcategorieService.create(evc);
 		
 		IServiceObject ClientService=(IServiceObject)context.getBean("clientService");

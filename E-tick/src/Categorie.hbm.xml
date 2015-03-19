@@ -14,6 +14,6 @@
         <property name="nbCategorie" type="int">
             <column name="NBCATEGORIE" />
         </property>
-         <one-to-one name="evenementCategorie" class="model.EvenementCategorie"></one-to-one>
+       
     </class>
 </hibernate-mapping>
